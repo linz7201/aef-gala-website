@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title>     
+         AEF Gala
+        </title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--External Script -->
+        <script src="./scripts/nav-bar.js"></script>
+<style>
+    body{
+        background: url(images/watercolor2.png), url(images/watercolor1.png);
+        background-size: 70%, 55%;
+        background-position: left -160% top 29%, right -65% bottom -3%;
+        background-repeat: no-repeat;
+    }
+    @media (max-width:1000px) {
+        body{
+            background-position: left -160% top 20%, right -65% bottom -3%;
+        }
+    }
+</style>    
+    </head>
+
+
+    <body>
+        <div class="header" id="navbar">
+            <header>
+            <ul>
+                <li class="logo"><img src="images/aef_logo_c.png"></li>
+                <li><a href="gala.html">The Gala</a></li>
+                <li><a href="support.html">Support Us</a></li>
+                <li><a href="about.html">About AEF</a></li>
+                <li><a href="sponsors.html">Our Sponsors</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="icon"><a href="javascript:void(0);" class="icon" onclick="onMenuClick()"><img src="./images/hamburger.png"></a></li>
+            </ul>
+        </header>
+    </div>
+    
+    <div class="hero">
+            <div class="hero-text">
+                <h2>The 18th Annual</h2>
+                <h2 id="herosecondline">Annual Service Awards and</h2>
+                <h1>Gala</h1>
+        <p><span class="counter" data-target="750000" id="dollarsDonated">0</span> dollars donated <br>
+            <span class="counter" data-target="18000" id="studentsAided">0</span> students aided<br>
+            <span class="counter" data-target="18" id="schoolsBenefited">0</span> schools benefited <br>
+            Fueling education for a brighter future.<br></p>
+            <a id="herobutton" href="./rsvp.html">Buy Gala Tickets Today</a>
+           
+            </div>
+        </div>
+        
+    <div class="content">
+        <!-- content lies here -->
+        
+        <img src="./images/topflowers.png" id="topflowers">
+        <h1>About the Gala</h1>
+        <p>The AEF Gala is a night of celebration, featuring food, drinks, music, and silent & live auctions, all at the Hilton Hotel located in San Gabriel. It is held annually by the Alhambra Education Foundation, the fundraising partner for the Alhambra Unified School District. 
+        </p>
+        <img src="./images/galabody.png" id="galabody">
+        
+        <section class="galaimpact">
+        <h1>The Gala's Impact</h1>
+        <p>At the AEF Gala, we recognize and honor those who give back to our community </p>
+            <p>…and we’ve been doing just that since 2005!</p> 
+            <p>Over these 17 years, the Gala has raised over $750,000 to improve the lives of the children in our schools. It has funded music classes, counselors, supplies, computers, internet access, books, uniforms, programs, and so much more.</p>
+            <p>Your support has made this possible.</p>
+        </section>   
+        
+        <a class="donatebutton" href="./donate.html">Donate to AEF</a>
+        <img src="./images/bottomflowers.png" id="bottomflowers">
+    </div>
+    <div class="footer">
+        <footer>
+            <table id="contact">
+                <tr >
+                    <td id="firstcontactcol">Contact</td>  <td id="lastcontactrcol"><a href="mailto:support@aef4kids.com">support@aef4kids.com</a></td>
+                </tr>
+              
+                <tr >
+                    <td id="firstcontactcol"><a href="tel:+16269433080">1(626) 943-3080</a></td>
+                <td id="lastcontactrcol"><a>Mon-Fri 8AM - 4PM</a></td>
+                </tr>
+
+                <tr>
+                   <td colspan="2">Copyright &#169; 2023 AEF Gala. All Rights Reserved.</td> 
+                </tr>
+                
+                
+            </table>
+            <ul id="footer-aef-logo">
+                <li><a href="https://www.aef4kids.com/"><img src="images/footerlogo.png"></a></li>
+                <!-- <li><img src="./images/aef_word.png"></li> -->
+            </ul>
+            <ul id="socials">
+                <!--<li><button id="subscribe">Subscribe to Our Newsletter</button></li>-->
+                <li><a href="https://maps.app.goo.gl/qEAL8jCuaeZ5Wijj8" target="_blank">1603 Chestnut Street, Alhambra, CA 91803</a></li>
+                <br>
+                <br>
+                <li><ul>
+                    <li><a href="https://www.instagram.com/aef4kids?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./images/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.facebook.com/aef4kids?eid=ARAqSVb9qq_IHO6O2yPmLuli-qXn0Z8K9nQC-h7ahCwlXy4J5KJQ7nLIIES4IsnYtFyYTVqKRAItZ-kq"><img src="./images/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="
+                        https://www.youtube.com/channel/UCCwoIYXVtG1D2bxsl2aiOXg"><img src="./images/youtube.png" alt="YouTube"></a></li>
+                     <li><a href="mailto:support@aef4kids.com"><img src="images/gmail.png" alt="Gmail"></a></li>
+                </ul></li>
+            </ul>
+        </footer>
+        <!--<img src="/images/watercolor1.png" id="botrightwatercolor">-->
+    </div>
+</body>
+<script>
+    function startCounterAnimation(targetNumber, duration, counterId) {
+        let currentNumber = 0;
+        let increment = targetNumber / (duration / 16.25); // Increment per frame assuming 60 fps
+    
+        const updateCounter = () => {
+            const counterElement = document.getElementById(counterId);
+            counterElement.textContent = formatNumber(Math.round(currentNumber));
+            if(currentNumber + increment > targetNumber) {
+                increment = targetNumber - currentNumber;
+            }
+            if (currentNumber < targetNumber) {
+                currentNumber += increment;
+                requestAnimationFrame(updateCounter);
+            }
+        }
+    
+        updateCounter();
+    }
+
+    function formatNumber(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    // Function to reset the counter number
+    function resetCounter(counterId) {
+        const counterElement = document.getElementById(counterId);
+        counterElement.textContent = "0";
+    }
+
+    // following functions reanimate numbers on scroll, needs fixing though
+    /*
+    // Function to handle scroll events
+    function handleScroll() {
+        const counters = document.querySelectorAll('.counter');
+        const lastCounter = counters[counters.length - 1];
+        const lastCounterRect = lastCounter.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (lastCounterRect.bottom < 0) {
+            // Scrolled past the last counter, reset numbers
+            counters.forEach(counter => {
+                resetCounter(counter.id);
+            });
+        }
+
+        if (lastCounterRect.top < 0 && lastCounterRect.bottom > 0) {
+            // Scrolled back to the top past the last counter, initiate animation
+            startAnimation();
+        }
+    }
+    */
+    
+    function startAnimation() {
+        for(var i = 0; i < counters.length; i++){
+            let target = document.getElementById(counters[i]).getAttribute("data-target");
+            startCounterAnimation(target, durations[i], counters[i]);
+        }
+    }
+
+    const counters = ["dollarsDonated", "studentsAided", "schoolsBenefited"];
+    const durations = [2000, 2000, 2000]; // configure to amount of milliseconds it takes to reach target number
+    startAnimation();
+    // Add event listener for scroll events
+    //window.addEventListener('scroll', handleScroll);
+</script>
+</html>

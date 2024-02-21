@@ -1,0 +1,170 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Configure document */
+html {
+    background-color: black;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Configure header and navbar */
+ul {
+    list-style-type: none;
+}
+
+.header {
+    background-color: white;
+    color: black;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 70px;
+}
+
+header {
+    display: flex;
+    height: 70px;
+    
+}
+
+.header img {
+    padding: 10px 0px 10px 10px;
+    
+}
+
+.header ul {
+    text-transform: uppercase;
+    text-decoration-line: none;
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.header, a:visited, a{
+    color:black;
+    text-decoration-line:none;
+}
+
+.header ul li a:hover{
+    color:#8b651b;
+}
+
+.header ul li {
+    display: inline;
+    flex-wrap: nowrap;
+    padding-left: 25px;
+    padding-right:25px;
+    line-height: 70px;
+    vertical-align: center;
+}
+
+/* Configure content area */
+.content {
+    display: block;
+    height: auto;
+}
+
+h1 {
+    padding: 20px;
+}
+
+/* Configure footer area */
+.footer {
+    color: black;
+    position: relative;
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: auto;
+    margin-bottom: 5%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer img {
+    max-width: 150px;
+}
+
+.footer #contact {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.footer #contact li {
+    text-align: center;
+}
+
+.footer #socials {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.footer #socials li {
+    text-align: center;
+    
+}
+
+.footer #socials ul li {
+    padding: 0% 5%;
+}
+
+.footer button {
+    margin-bottom: 10px;
+}
+
+.footer #socials ul li{
+    display: inline;
+}
+
+.footer ul {
+    display: block;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#subscribe {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#subscribe:hover {
+    background-color: black;
+    color: white;
+}
+
+.footer .logo {
+    cursor: pointer;
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: grayscale(1) invert(100);
+}
+
+.footer #socials img {
+    width: 20px;
+}
+

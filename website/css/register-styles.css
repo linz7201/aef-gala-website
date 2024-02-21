@@ -1,0 +1,486 @@
+/* CSS Reset */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+/* Configure fonts */
+@font-face {
+    font-family: PhotoSig;
+    src: url(/website/fonts/Photograph\ Signature.ttf);
+}
+
+/* Configure HTML document */
+html {
+    background-color: white;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Configure header elements and class */
+.header {
+    background-color: white;
+    color: black;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 70px;
+}
+
+header {
+    display: flex;
+    height: 70px;
+}
+
+.header img {
+    padding: 10px 0 10px;
+    height: 50px;
+}
+
+.header li:first-child {
+    height: 70px;
+}
+
+.header ul {
+    text-transform: uppercase;
+    text-decoration-line: none;
+    display: flex;
+    align-items: stretch; 
+    /* Default */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header, a:visited, a{
+    color:black;
+    text-decoration-line:none;
+}
+
+.header ul li a:hover{
+    color:#8b651b;
+}
+
+.header ul li {
+    display: inline;
+    flex-wrap: nowrap;
+    padding-left: 25px;
+    padding-right:25px;
+    line-height: 70px;
+    vertical-align: center;
+}
+
+/* Configure graphics */
+#topflowers, #bottomflowers{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    align-self: center;
+    text-align:center;
+}
+  
+  #topflowers{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+  
+  #bottomflowers{
+    padding-top: 2%;
+    padding-bottom: 5%
+}
+
+/* Configure forms */
+  h1 {
+    padding-left: 20px; padding-right: 20px;
+    color: #c8a45f;
+    font-family: PhotoSig;
+    font-size:500%;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.form-area {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    width: 60%;
+}
+
+#gala-registration > section {
+    margin: 10px 0px;
+    width: 100%;
+}
+
+/* Configure input boxes */
+input {
+  box-sizing: border-box;
+  position: inherit;
+  padding: 10px;
+  height: 30px; 
+  width: 100%;
+  background-color: #b7ced0;
+  color:#26575a;
+  border-radius: 40px;
+}
+
+::placeholder{
+  color:#6c9496;
+}
+
+select {
+  box-sizing: border-box;
+  position: inherit;
+  padding: 2%;
+  height: 30px; 
+  width: 100%;
+  background-color: #b7ced0;
+  color:#699194;
+  border-radius: 40px;
+}
+
+.asterisk {
+    color: red;
+}
+
+label {
+    display: block;
+}
+
+.contactInput {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.contactInput .phone {
+    width: 36%;
+    min-width: 80px;
+    flex-grow: 1;
+}
+  
+.contactInput .email {
+    width: 60%;
+    min-width: 110px;
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.errorMsg {
+    color: red;
+    font-size: 12px;
+}
+
+#guestForm input:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* Configure submit button */
+#submit {
+    height: fit-content;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color:#8b651b;
+    background-color: #dbbd83;
+    display:inline-block;
+    width:40%;
+    border-radius: 40px;
+    box-shadow: 0 9px #8b651b;
+}
+  
+  #submit:visited{
+    color:#8b651b
+}
+  #submit:hover{
+    background-color: #c8a45f;
+    color: white;
+}
+  
+  #submit:active{
+    background-color: #c8a45f;
+    color:white;
+    box-shadow: 0 5px #8b651b;
+    transform: translateY(4px)
+}
+  
+  #submit input {
+    text-transform:uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    word-spacing:5px;
+    text-align:center;
+    color:#8b651b;
+    background-color: transparent;
+    padding: 0px;
+}
+  
+  #submit input:visited{
+    color:#8b651b;
+}
+  
+  #submit input:hover{
+    color:white;
+}
+  
+  #submit:active{
+    color:white;
+    transform: translateY(4px)
+}
+
+/* Configure footer element and classes */
+.footer {
+    color: black;
+    position: relative;
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: auto;
+    margin-bottom: 5%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer img {
+    max-width: 150px;
+}
+
+.footer #contact {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.footer #contact li {
+    text-align: center;
+}
+
+.footer #socials {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.footer #socials li {
+    text-align: center;
+    }
+
+.footer #socials ul li {
+    padding: 0% 5%;
+}
+
+.footer button {
+    margin-bottom: 10px;
+}
+
+.footer #socials ul li{
+    display: inline;
+}
+
+.footer ul {
+    display: block;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#subscribe {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#subscribe:hover {
+    background-color: black;
+    color: white;
+}
+
+.footer .logo {
+    cursor: pointer;
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: grayscale(1) invert(100);
+}
+
+.footer #socials img {
+    width: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Configure footer contacts area */
+#contact{border-spacing: 15px}
+
+#firstcontactcol{text-align:left}
+#lastcontactrcol{text-align:right}
+
+@media (min-width:1200px) {
+    /* desktop viewport */
+  
+    .header .icon {
+        display: none;
+    }
+  
+  }
+  
+  @media (max-width:1200px)  { 
+    /* tablet viewport */ 
+    
+    .header a:not(.icon){
+        display: none;
+    }
+  
+    .header .icon img{
+      display: block;
+      max-height: 55px;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  
+    .header.responsive ul{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        z-index: 10;
+    }
+  
+    .header.responsive li:not(.logo){
+        padding: 0;
+    }
+        
+    .header.responsive .icon {
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+  
+    .header.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+        background-color: white;
+        padding: 0 25px;
+    }
+  
+    .header.responsive a:hover:not(.icon){
+        background-color: #f2f2f2;
+    }
+  
+    h1{
+        font-size: 300%;
+    }
+  
+    h3, .content p, .header li a, #herobutton, .donatebutton, .hero-text p, .footer, #submit input, label, ::placeholder{
+        font-size: medium;
+        font-family: 'Times New Roman';
+    }
+  
+    h2 {
+        font-size: 1em;
+    }
+  
+    footer{
+        flex-direction: column;
+    }
+  
+    .footer #socials, .footer #contact {
+        margin: 0;
+    }
+  
+    .footer img {
+        margin: 10% 0 30% 0;
+    }
+  
+    .supportChoice p, .donateChoice p {
+      padding: 7px 0;
+    }
+  }
+  
+  @media (max-width:940px)  { 
+    /* phone viewport */
+  
+    .header .icon img, .header .logo img{
+      height: 30px;
+    }
+  
+    .header, .header li{
+        height: 50px;
+    }
+  
+    .header li:not(.logo,.icon){
+      display: none;
+    }
+  
+    .header li:first-child {
+        height: 50px;
+    }
+    
+    .header ul li{
+        line-height: 50px;
+    }
+  
+    .header.responsive .icon, .header .icon img {
+        right: 0;
+        top: 0;
+        position: absolute;
+        padding-right: 25px;
+    }
+  
+    .header.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+        background-color: white;
+        padding: 0 25px;
+    }
+  
+    h1, .supportflex h1, .sponsor h1{
+        font-size: 200%;
+    }
+  
+    h3, .content p, .header li a, #herobutton, .donatebutton, .hero-text p, .footer, .support-text p, #submit input, label, ::placeholder{
+        font-size: small;
+    }
+  
+    .content {
+        width: 95%;
+    }
+  
+    h2 {
+        font-size: 0.8em;
+    }
+  
+    .supportChoice p, .donateChoice p {
+      padding: 9px 0;
+    }
+  
+  }

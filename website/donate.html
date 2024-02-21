@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AEF Gala - Donate</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" type="text/css" href="css/template-styles.css">
+        <link rel="stylesheet" type="text/css" href="css/donate-styles.css">
+         <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--External Script -->
+        <script src="./scripts/nav-bar.js"></script>
+
+        <style>
+            body{
+                background: url(images/watercolor3.png), url(images/watercolor6.png);
+                background-size: 60%, 45%;
+                background-position: left -400px top -350px, right -230px bottom -400px;
+                background-repeat: no-repeat;
+            }
+            @media (max-width:1200px) {
+                body{
+                    background-position: left -400px top -150px, right -230px bottom -400px;
+                }
+            }
+            @media (max-width:940px) {
+                body{
+                    background-position: left -330px top -90px, right -200px bottom -360px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header" id="navbar">
+            <header>
+            <ul>
+                <li class="logo"><img src="images/aef_logo_c.png"></li>
+                <li><a href="gala.html">The Gala</a></li>
+                <li><a href="support.html">Support Us</a></li>
+                <li><a href="about.html">About AEF</a></li>
+                <li><a href="sponsors.html">Our Sponsors</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="icon"><a href="javascript:void(0);" class="icon" onclick="onMenuClick()"><img src="./images/hamburger.png"></a></li>
+            </ul>
+            </header>
+        </div>
+        <div class="content">
+            <section class="intro">
+            <h1>Become Our Sponsor</h1>
+            <h3>Please fill out your information below and select the level of sponsoship you would like to support us with! For more info on the sponsorship levels click <a href="support.html">here</a>.</h3>
+        </section>
+            <img src="./images/topflowers.png" id="topflowers">
+
+            <div class="form-area"> 
+                <form id="gala-support" name="input" action="" method="get">
+                    <section class="input who">
+                    <section class="input acknowledgement">
+                        <label for="orgName">Name of Organization</label>
+                        <input type="text" id="orgName" name="orgName" placeholder="Fund4Kids Corp">
+                    </section>
+                    <section class="input name">
+                        <label for="fullName">Name of Donor/Sponsor <span class="asterisk">*</span></label>
+                        <input type="text" id="fullName" class="required" name="fullName" placeholder="John Doe" onchange="isEmpty(this, 'fullNameEmpty')">
+                        <small id="fullNameEmpty" class="errorMsg hidden">Input required</small>
+                    </section>
+                </section>
+                    <section class="contactInput">
+                        <section class="input phone">
+                            <label for="phoneNumber">Phone Number <span class="asterisk">*</span></label>
+                            <input type="tel" id="phoneNumber" class="required" name="phoneNumber" placeholder="123-456-7890" onchange="isEmpty(this, 'phoneNumberEmpty'); formatPhone(this); validate(this, /^\d{3}[-]\d{3}[-]\d{4}$/, 'phoneError');">
+                            <small id="phoneError" class="errorMsg hidden">Input must follow format: XXX-XXX-XXXX</small>
+                            <small id="phoneNumberEmpty" class="errorMsg hidden">Input required</small>
+                        </section>
+                        <section class="input email">
+                            <label for="emailAddress">Email Address <span class="asterisk">*</span></label>
+                            <input type="text" id="emailAddress" class="required" name="emailAddress" placeholder="johndoe@email.com" onchange="isEmpty(this, 'emailAddressEmpty'); validate(this, /^[A-Za-z0-9._-]+\@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, 'emailError');">
+                            <small id="emailError" class="errorMsg hidden">Input must be a valid email</small>
+                            <small id="emailAddressEmpty" class="errorMsg hidden">Input required</small>
+                        </section>
+                    </section>
+                    <section class="addressInput">
+                        <section class="input address">
+                            <label for="addressLine">Address <span class="asterisk">*</span></label>
+                            <input type="text" id="addressLine" class="required" name="addressLine" placeholder="1020 Charizard Street" onchange="isEmpty(this, 'addressLineEmpty')">
+                            <small id="addressLineEmpty" class="errorMsg hidden">Input required</small>
+                        </section>
+                        <section class="input city">
+                            <label for="cityInput">City <span class="asterisk">*</span></label>
+                            <input type="text" id="cityInput" class="required" name="cityInput" placeholder="Pokemon City" onchange="isEmpty(this, 'cityInputEmpty')"> 
+                            <small id="cityInputEmpty" class="errorMsg hidden">Input required</small>
+                        </section>
+                        <section class="input state">
+                            <label for="stateInput">State <span class="asterisk">*</span></label>
+                            <select id="stateInput" name="stateInput" onchange="this.style.border='1px solid black';">
+                                <option value="">--</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AR">AR</option>
+                                <option value="AZ">AZ</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DC">DC</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="IA">IA</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="MA">MA</option>
+                                <option value="MD">MD</option>
+                                <option value="ME">ME</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MO">MO</option>
+                                <option value="MS">MS</option>
+                                <option value="MT">MT</option>
+                                <option value="NC">NC</option>
+                                <option value="NE">NE</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NV">NV</option>
+                                <option value="NY">NY</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WI">WI</option>
+                                <option value="WV">WV</option>
+                                <option value="WY">WY</option>
+                            </select>
+                        </section>
+                        <section class="input zipcode">
+                            <label for="zipcodeInput">Zipcode <span class="asterisk">*</span></label>
+                            <input type="number" min="0" max="99999" inputmode="numeric" id="zipcodeInput" class="required" name="zipcodeInput" placeholder="85345" onkeypress="limitNum(this, 5); return !['+','-','.','e'].includes(event.key);" onchange="isEmpty(this, 'zipcodeInputEmpty'); validate(this, /^[0-9]{5}$/, 'zipcodeError');">
+                            <small for="zipcodeInput" id="zipcodeError" class="errorMsg hidden">Input must be a valid zipcode</small>
+                            <small id="zipcodeInputEmpty" class="errorMsg hidden">Input required</small>
+                        </section>
+                    </section>
+
+                    <section class="supportChoice">
+                        <section class="donate">
+                            <input class="radioButton" type="radio" id="donateRadio" name="supportChoice" value="donate">
+                            <label for="donateRadio"><p>Donate</p></label>
+                        </section>
+                        <section class="sponsor">
+                            <input class="radioButton" type="radio" id="sponsorRadio" name="supportChoice" value="sponsor">
+                            <label for="sponsorRadio"><p>Sponsor</p></label>
+                        </section>
+                    </section>
+                    <small id="supportChoiceEmpty" class="errorMsg hidden">Select a type of support</small>
+                    
+                    <section class="hidden" id="donateChoice">
+                        <h1>Donate to the Auction</h1>
+                        <section class="input donationItem">
+                            <label for="itemInput">Donated Item or Name of Basket <span class="asterisk">*</span></label>
+                            <input type="text" id="itemInput" class="required hidden" name="itemInput" placeholder="Bananas" onchange="isEmpty(this, 'itemInputEmpty')">
+                            <small id="itemInputEmpty" class="errorMsg hidden">Input required</small>
+                        </section>
+                        <section class="input donationDesc">
+                            <label for="itemDesc">Description of Donated Item <span class="asterisk">*</span></label>
+                            <input type="text" id="itemDesc" class="required hidden" name="itemDesc" placeholder="(100 characters or less)" maxlength="100" onchange="isEmpty(this, 'itemDescEmpty')">
+                            <small id="itemDescEmpty" class="errorMsg hidden">Input required</small>
+                        </section>
+                        <section class="donationInfo">
+                            <section class="input donationValue">
+                                <label for="itemValue">Value <span class="asterisk">*</span></label>
+                                <span class="currencyInput"><p>$</p><input type="number" id="itemValue" class="required hidden" name="itemValue" placeholder="16" onkeypress="limitNum(this, 7); return !['+','-','.','e'].includes(event.key);" onchange="isEmpty(this, 'itemValueEmpty')"></span>
+                                <small id="itemValueEmpty" class="errorMsg hidden">Input required</small>
+                            </section>
+                            <section class="input donationExpDate">
+                                <label for="itemExpDate">Exp. Date <span class="asterisk">*</span></label>
+                                <input type="text" id="itemExpDate" class="required hidden" name="itemExpDate" placeholder="12/24" maxlength="5" onchange="isEmpty(this, 'itemExpDateEmpty'); validate(this, /^[0-1][0-9][\/]\d{2}$/, 'expDateError');">
+                                <small for="itemExpDate" id="expDateError" class="errorMsg hidden">Input must follow format: MM/YY</small>
+                                <small id="itemExpDateEmpty" class="errorMsg hidden">Input required</small>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="hidden" id="sponsorChoice">
+                        <h1>Sponsor the Gala</h1>
+                        <label>Sponsor Amount <span class="asterisk">*</span></label>
+                        <small id="sponsorTypeEmpty" class="errorMsg hidden">Select a sponsorship type</small>
+                        <section class="sponsorType">
+                            <span><input type="radio" id="crownJewelsSponsor" name="sponsorType" value="10000" class="radio">
+                            <label for="crownJewelsSponsor">Crown Jewels Sponsor $10,000</label></span><span>
+                            <input type="radio" id="diamondSponsor" name="sponsorType" value="5000" class="radio">
+                            <label for="diamondSponsor">Diamond Sponsor $5,000</label></span><span>
+                            <input type="radio" id="platinumSponsor" name="sponsorType" value="2500" class="radio">
+                            <label for="platinumSponsor">Platinum Sponsor $2,500</label></span><span>
+                            <input type="radio" id="goldSponsor" name="sponsorType" value="1500" class="radio">
+                            <label for="goldSponsor">Gold Sponsor $1,500</label></span><span>
+                            <input type="radio" id="silverSponsor" name="sponsorType" value="1000" class="radio">
+                            <label for="silverSponsor">Silver Sponsor $1000</label></span><span>
+                            <input type="radio" id="bronzeSponsor" name="sponsorType" value="300" class="radio">
+                            <label for="bronzeSponsor">Bronze Sponsor $300</label></span><span>
+                            <input type="radio" id="customSponsor" name="sponsorType" value="custom" class="radio">
+                            <span class="currencyInput"><p>$</p><input type="number" inputmode="numeric" id="customAmount" name="customAmount" placeholder="Custom" onkeypress="limitNum(this, 7); return !['+','-','.','e'].includes(event.key);" max="9999999" onchange="isEmpty(this, 'customAmountEmpty')"><p id="sponsorLevelType"></p>
+                            <small id="customAmountEmpty" class="errorMsg hidden">Input required</small></span>
+                        </section>
+                        <section class="cardInfo">
+                            <label>Card Type <span class="asterisk">*</span></label>
+                            <small id="cardTypeEmpty" class="errorMsg hidden" display="block">Select the card type</small>
+                            <section class="cardType">
+                                <span><input type="radio" id="visaCard" name="cardType" value="visa" class="radio">
+                                <label for="visaCard">Visa</label></span><span>
+                                <input type="radio" id="masterCard" name="cardType" value="mastercard" class="radio">
+                                <label for="masterCard">MasterCard</label></span><span>
+                                <input type="radio" id="aeCard" name="cardType" value="ameriexpress" class="radio">
+                                <label for="aeCard">American Express</label></span><span>
+                                <input type="radio" id="discoverCard" name="cardType" value="discover" class="radio">
+                                <label for="discoverCard">Discover</label></span>
+                            </section>
+                            <section class="cardNameInput">
+                                <label for="cardName">Name on Card <span class="asterisk">*</span></label>
+                                <input type="input" id="cardName" class="required" name="cardName" placeholder="John Doe" onchange="isEmpty(this, 'cardNameEmpty')">
+                                <small id="cardNameEmpty" class="errorMsg hidden">Input required</small>
+                            </section>
+                            <section class="cardInfoInput">
+                                <section class="numberInput input">
+                                    <label for="cardNumber">Card Number <span class="asterisk">*</span></label>
+                                    <input type="number" id="cardNumber" class="required" name="cardNumber" placeholder="1234567890123456" onkeypress="limitNum(this, 16); return !['+','-','.','e'].includes(event.key);" max="9999999999999999" onchange="isEmpty(this, 'cardNumberEmpty'); validate(this, /^\d{15,16}$/, 'cardNumberError');">
+                                    <small id="cardNumberError" class="errorMsg hidden">Must be valid a card number</small>
+                                    <small id="cardNumberEmpty" class="errorMsg hidden">Input required</small>
+                                </section><section class="expDate input">
+                                    <label for="cardExpDate">Exp. Date <span class="asterisk">*</span></label>
+                                    <input type="text" id="cardExpDate" class="required" name="cardExpDate" placeholder="12/26" maxlength="5" onchange="isEmpty(this, 'cardExpDateEmpty'); validate(this, /^[0-1][0-9][\/]\d{2}$/, 'expDateError2');">
+                                    <small for="itemExpDate" id="expDateError2" class="errorMsg hidden">Input must follow format: MM/YY</small>
+                                    <small id="cardExpDateEmpty" class="errorMsg hidden">Input required</small>
+                                </section><section class="secCode input">
+                                    <label for="cardSecCode">CVV <span class="asterisk">*</span></label>
+                                    <input type="number" id="cardSecCode" class="required" name="cardSecCode" placeholder="123" onkeypress="limitNum(this, 3); return !['+','-','.','e'].includes(event.key);" min="111" max="999" onchange="isEmpty(this, 'cardSecCodeEmpty'); validate(this, /^[0-9]{3}$/, 'cvvError');">
+                                    <small id="cvvError" class="errorMsg hidden">Please enter a valid CVV</small>
+                                    <small id="cardSecCodeEmpty" class="errorMsg hidden">Input required</small>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                    
+                    <section id="submit">
+                        <input id="submit-form" type="submit" value="Submit">
+                    </section>
+                </form>
+            </div><img src="./images/bottomflowers.png" id="bottomflowers">
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <footer>
+                <table id="contact">
+                    <tr >
+                        <td id="firstcontactcol">Contact</td>  <td id="lastcontactrcol"><a href="mailto:support@aef4kids.com">support@aef4kids.com</a></td>
+                    </tr>
+                  
+                    <tr >
+                        <td id="firstcontactcol"><a href="tel:+16269433080">1(626) 943-3080</a></td>
+                    <td id="lastcontactrcol"><a>Mon-Fri 8AM - 4PM</a></td>
+                    </tr>
+    
+                    <tr>
+                       <td colspan="2">Copyright &#169; 2023 AEF Gala. All Rights Reserved.</td> 
+                    </tr>
+                    
+                    
+                </table>
+                <ul id="footer-aef-logo">
+                    <li><a href="https://www.aef4kids.com/"><img src="images/footerlogo.png"></a></li>
+                    <!-- <li><img src="./images/aef_word.png"></li> -->
+                </ul>
+                <ul id="socials">
+                    <!--<li><button id="subscribe">Subscribe to Our Newsletter</button></li>-->
+                    <li><a href="https://maps.app.goo.gl/qEAL8jCuaeZ5Wijj8" target="_blank">1603 Chestnut Street, Alhambra, CA 91803</a></li>
+                    <br>
+                    <br>
+                    <li><ul>
+                        <li><a href="https://www.instagram.com/aef4kids?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./images/instagram.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/aef4kids?eid=ARAqSVb9qq_IHO6O2yPmLuli-qXn0Z8K9nQC-h7ahCwlXy4J5KJQ7nLIIES4IsnYtFyYTVqKRAItZ-kq"><img src="./images/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="
+                            https://www.youtube.com/channel/UCCwoIYXVtG1D2bxsl2aiOXg"><img src="./images/youtube.png" alt="YouTube"></a></li>
+                         <li><a href="mailto:support@aef4kids.com"><img src="images/gmail.png" alt="Gmail"></a></li>
+                    </ul></li>
+                </ul>
+            </footer>
+            <!--<img src="/images/watercolor1.png" id="botrightwatercolor">-->
+        </div>
+    </body>
+    <!--External Script -->
+    <script type="text/javascript" src="scripts/support-form.js"></script>
+    <!-- Limit Characters for Number Input -->
+    <script>
+        function limitNum(element, max_chars) {
+            if(element.value.length >= max_chars) {
+                element.value = element.value.substr(0, max_chars-1);
+            }
+        }
+        function validate(element, pattern, errorId){
+            const error = document.getElementById(errorId);
+            if(element.value=="" || pattern.test(element.value)){
+                element.style.border = "1px solid black";
+                error.classList.add("hidden");
+            } else {
+                element.style.border = "2px solid red";
+                error.classList.remove("hidden");                
+            }
+        }
+        function isEmpty(element, errorId){
+            const error = document.getElementById(errorId);
+            if(element.value != ""){
+                element.style.border = "1px solid black";
+                error.classList.add("hidden");
+            }
+        }
+        function formatPhone(element){
+            const phoneValue = element.value;
+            const numberOnly = /^\d{10}$/;
+            if(numberOnly.test(phoneValue)){
+                element.value = element.value.substring(0,3)+"-"+element.value.substring(3,6)+"-"+element.value.substring(6,11);
+            }
+        }
+    </script>
+</html>
