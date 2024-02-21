@@ -1,8 +1,6 @@
 # Alhambra Educational Foundation (AEF) Gala Website
 **FBLA Website Design 2023-2024 - Mark Keppel High School**
 
-## Features
-
 ## Attributions
 - Floral Watercolor Illustrations  by Junik Studio (https://www.behance.net/JunikStudio)
 - Watercolor Flower Wreaths by Israt Borsha (https://www.behance.net/ijborshae157)
@@ -18,7 +16,6 @@
 ## Authors
 - [Nick Li](url "https://github.com/linz7201") (*backend*)
 - [Xiushan Lu](url "https://github.com/xiushanlu") (*designs/frontend*)
-- [Isabella Li](url "https://github.com/isparkks") (*frontend*)
 
 ## Acknowledgement
 This website is made for the [Alhambra Educational Foundation or AEF](url "https://www.aef4kids.com/").
