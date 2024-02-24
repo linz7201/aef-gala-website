@@ -10,16 +10,20 @@
 - People Inside Conference by Jakob Dalbjörn on Unsplash (https://unsplash.com/photos/people-inside-conference-cuKJre3nyYc)
   
 ## Software Used
-- Visual Studio Code
-- Adobe Photoshop 2024
+- [Visual Studio Code](url "https://code.visualstudio.com/") (IDE application used to develop, compile, and test our code)
+- [Google Apps Script](url "https://www.google.com/script/start/") & [Google Sheets](url "https://www.google.com/sheets/about/") (Apps Script used to pull information from the forms and store it into Sheets)
+- [GitHub](url "https://github.com/") (online platform used to store code and collaborate with teammates)
+- [Adobe Photoshop 2024](url "https://www.adobe.com/products/photoshop.html") (image creation and editing software)
+- [Figma](url "https://www.figma.com/") (digital prototyping tool used to create the website's format and design)
+- [Procreate](url "https://procreate.com/") (application used to create graphics for the website)
 
 ## Authors
 - [Nick Li](url "https://github.com/linz7201") (*backend*)
 - [Xiushan Lu](url "https://github.com/xiushanlu") (*designs/frontend*)
 
 ## Acknowledgement
-This website is made for the [Alhambra Educational Foundation or AEF](url "https://www.aef4kids.com/").
+This website is made for the [Alhambra Educational Foundation or AEF](url "https://www.aef4kids.com/") and we are given full permission by AEF to use their pictures to create this website.
 
-"The mission of the Alhambra Educational Foundation (AEF) is to raise funds to support and enhance the educational programs of the Alhambra Unified School District (AUSD), benefiting all schools and all students. In addition, the Foundation provides the district, school sites, & all students with direct service by developing, sponsoring and implementing programs which enrich the curriculum & instructional program."
+"The mission of the Alhambra Educational Foundation (AEF) is to raise funds to support and enhance the educational programs of the Alhambra Unified School District (AUSD), benefiting all schools and all students. In addition, the Foundation provides the district, school sites, & all students with direct service by developing, sponsoring and implementing programs which enrich the curriculum & instructional program." (AEF)
 
-The website "aef4kids.com" accessible at https://www.aef4kids.com/ is owned and operated by the Alhambra Unified School District.
+The website "aef4kids.com" accessible at https://www.aef4kids.com/ is owned and operated by the Alhambra Unified School District (https://www.ausd.us/).
