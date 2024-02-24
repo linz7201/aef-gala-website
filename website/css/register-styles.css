@@ -8,7 +8,7 @@
 /* Configure fonts */
 @font-face {
     font-family: PhotoSig;
-    src: url(/website/fonts/Photograph\ Signature.ttf);
+    src: url(../fonts/Photograph\ Signature.ttf);
 }
 
 /* Configure HTML document */
