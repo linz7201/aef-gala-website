@@ -1,3 +1,10 @@
+<!-- 
+    Support page is created to give users information on ways to support
+    the organization (AEF) for their mission to fund for programs and schools
+    under their parent organization (AUSD). The page includes different
+    sponsorship levels and uses JavaScript to create an interactive carousel
+    that allows users to learn more about each level and their benefits.
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,9 +93,9 @@
             <li class="logo"><img src="images/aef_logo_c.png"></li>
             <li><a href="gala.html">The Gala</a></li>
             <li><a href="support.html">Support Us</a></li>
-            <li><a href="about.html">About AEF</a></li>
-            <li><a href="sponsors.html">Our Sponsors</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#about.html">About AEF</a></li>
+            <li><a href="#sponsors.html">Our Sponsors</a></li>
+            <li><a href="#contact.html">Contact Us</a></li>
             <li class="icon"><a href="javascript:void(0);" class="icon" onclick="onMenuClick()"><img src="./images/hamburger.png"></a></li>
         </ul>
         </header>
@@ -244,5 +251,11 @@
         </footer>
     </div>
 </body>
+<!-- External Script for Interactive Carousel -->
+<!-- 
+    The script is linked towards the end or after the body element in
+    order to allow the whole document and its images to load before 
+    enabling the functions for the buttons and animations
+ -->
 <script src="./scripts/support-carousel.js"></script>
 </html>

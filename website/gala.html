@@ -1,3 +1,10 @@
+<!-- 
+    Gala page is created for users to learn more about the AEF Gala and
+    given the opportunity to RSVP or support AEF for its event and mission.
+    With JavaScript creating animations like seeing numbers increase in the
+    hero section or directing users to forms when they click on buttons,
+    the website has more functionality.
+ -->
 <!DOCTYPE html> 
 <html lang="en">
     <head>
@@ -10,6 +17,7 @@
         <!--External Script -->
         <script src="./scripts/nav-bar.js"></script>
 <style>
+    /* Adding media queries or viewports to change design based on device */
     body{
         background: url(images/watercolor2.png), url(images/watercolor1.png);
         background-size: 70%, 55%;
@@ -32,9 +40,9 @@
                 <li class="logo"><img src="images/aef_logo_c.png"></li>
                 <li><a href="gala.html">The Gala</a></li>
                 <li><a href="support.html">Support Us</a></li>
-                <li><a href="about.html">About AEF</a></li>
-                <li><a href="sponsors.html">Our Sponsors</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#about.html">About AEF</a></li>
+                <li><a href="#sponsors.html">Our Sponsors</a></li>
+                <li><a href="#contact.html">Contact Us</a></li>
                 <li class="icon"><a href="javascript:void(0);" class="icon" onclick="onMenuClick()"><img src="./images/hamburger.png"></a></li>
             </ul>
         </header>
@@ -113,11 +121,18 @@
         <!--<img src="/images/watercolor1.png" id="botrightwatercolor">-->
     </div>
 </body>
+<!-- Internal Script to create counting animation -->
 <script>
+    /*
+        creates function to start counting animation when the page loads,
+        the numbers are increases linearly until they reach their desired
+        number based on the duration they are increasing until
+    */
     function startCounterAnimation(targetNumber, duration, counterId) {
         let currentNumber = 0;
         let increment = targetNumber / (duration / 16.25); // Increment per frame assuming 60 fps
-    
+        // creates an updateCounter function to change the numbers periodically
+        // so users view the numbers changing
         const updateCounter = () => {
             const counterElement = document.getElementById(counterId);
             counterElement.textContent = formatNumber(Math.round(currentNumber));
@@ -126,57 +141,34 @@
             }
             if (currentNumber < targetNumber) {
                 currentNumber += increment;
+                // runs provided function (comes with JavaScript) to animate the increase of numbers
                 requestAnimationFrame(updateCounter);
             }
         }
     
         updateCounter();
     }
-
+    // creates function to format plain numbers, to numbers with commas
     function formatNumber(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
-    // Function to reset the counter number
+    // creates function to reset the counter to zero
     function resetCounter(counterId) {
         const counterElement = document.getElementById(counterId);
         counterElement.textContent = "0";
     }
-
-    // following functions reanimate numbers on scroll, needs fixing though
-    /*
-    // Function to handle scroll events
-    function handleScroll() {
-        const counters = document.querySelectorAll('.counter');
-        const lastCounter = counters[counters.length - 1];
-        const lastCounterRect = lastCounter.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        if (lastCounterRect.bottom < 0) {
-            // Scrolled past the last counter, reset numbers
-            counters.forEach(counter => {
-                resetCounter(counter.id);
-            });
-        }
-
-        if (lastCounterRect.top < 0 && lastCounterRect.bottom > 0) {
-            // Scrolled back to the top past the last counter, initiate animation
-            startAnimation();
-        }
-    }
-    */
-    
+    // creates function to start the animation
     function startAnimation() {
         for(var i = 0; i < counters.length; i++){
             let target = document.getElementById(counters[i]).getAttribute("data-target");
             startCounterAnimation(target, durations[i], counters[i]);
         }
     }
-
+    // declares and initializes the spans needed to have the counting animation
     const counters = ["dollarsDonated", "studentsAided", "schoolsBenefited"];
-    const durations = [2000, 2000, 2000]; // configure to amount of milliseconds it takes to reach target number
+    // declares and initalizes the durations in milliseconds for each to reach the target number
+    const durations = [2000, 2000, 2000];
     startAnimation();
-    // Add event listener for scroll events
-    //window.addEventListener('scroll', handleScroll);
 </script>
 </html>

@@ -1,3 +1,11 @@
+<!-- 
+    RSVP page is created for users to put in their information like their
+    name, phone number, email address, and the number of guests they are
+    bringing to the AEF Gala. The internal scripts at the end of the file
+    help animate and give functionality to the expandable guest list input
+    and provide for form validations making sure each input is filled out
+    and within the correct format.
+ -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,12 +18,13 @@
         <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
+            /* Adding media queries or viewports to change design based on device */
             body{
-        background: url(images/watercolor3.png), url(images/watercolor6.png);
-        background-size: 60%, 45%;
-        background-position: left -62% top -70%, right -25% bottom -580%;
-        background-repeat: no-repeat;
-    }
+                background: url(images/watercolor3.png), url(images/watercolor6.png);
+                background-size: 60%, 45%;
+                background-position: left -62% top -70%, right -25% bottom -580%;
+                background-repeat: no-repeat;
+            }
             @media (max-width:1200px) {
                 body{
                     background-position: left -300px top -150px, right -130px bottom -400px;
@@ -35,9 +44,9 @@
                 <li class="logo"><img src="images/aef_logo_c.png"></li>
                 <li><a href="gala.html">The Gala</a></li>
                 <li><a href="support.html">Support Us</a></li>
-                <li><a href="about.html">About AEF</a></li>
-                <li><a href="sponsors.html">Our Sponsors</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#about.html">About AEF</a></li>
+                <li><a href="#sponsors.html">Our Sponsors</a></li>
+                <li><a href="#contact.html">Contact Us</a></li>
                 <li class="icon"><a href="javascript:void(0);" class="icon" onclick="onMenuClick()"><img src="./images/hamburger.png"></a></li>
             </ul>
             </header>
@@ -128,9 +137,14 @@
     <script>
         let index = 1;
         const guestCount = document.getElementById("guestCount");
-
+        /*
+            creates function to add an input box for an additional guest input
+            if the user fills in the previous input box
+        */
         function addGuestInput(){
+            // creates an element called input, ready to be added to the document
             let newGuestInput = document.createElement("input");
+            // adding attributes for input
             newGuestInput.type = "text";
             newGuestInput.classList.add("guestNames");
             newGuestInput.name = "guestName"+index.toString();
@@ -141,23 +155,36 @@
                 };
             })(index);
             index++;
+            // adds the element called input into the document 
             document.getElementById("guestForm").appendChild(newGuestInput);
             guestCount.textContent = index - 1;
         }
-
+        /*
+            creates function to remove an input box if the user deletes one of
+            their previous guest inputs
+        */
         function removeGuestInput(indexOfEmpty){
             let guestForm = document.getElementById("guestForm");
+            // finds all the input values within the guestForm section
             let inputFields = guestForm.getElementsByTagName("input");
+            // checks if there are more than one input
             if(inputFields.length > 1){
+                // if yes, then it would remove the input box that had their input deleted
                 guestForm.removeChild(inputFields[indexOfEmpty]);
             }
             index--;
             guestCount.textContent = index - 1;
         }
-
+        /* 
+            creates function to check if input box is empty, this function connects
+            to onchange event listeners that are assigned to each guest input box
+            before
+        */
         function isGuestEmpty(element, indexOfChanged){
+            // finds all the input boxes in the guestForm section
             let guestForm = document.getElementById("guestForm");
             let inputFields = guestForm.getElementsByTagName("input");
+            // using the parameters needed, do actions based on conditions
             if(element.value == ""){
                 removeGuestInput(indexOfChanged);
             } else if(inputFields[inputFields.length-1].value !== ""){
@@ -167,8 +194,15 @@
     </script>
     <!-- Internal Script for Form Validation -->
     <script>
+        /*
+            creates function to validate inputs based on the regular expression
+            (regex) given then changes the style of the input border and adds
+            or removes the error message based on if the input is validated
+            or not
+        */
         function validate(element, pattern, errorId){
             const error = document.getElementById(errorId);
+            // checks if input is empty or if it matches the regex
             if(element.value=="" || pattern.test(element.value)){
                 element.style.border="1px solid black";
                 error.classList.add("hidden");
@@ -177,7 +211,10 @@
                 error.classList.remove("hidden");                
             }
         }
-
+        /*
+            creates function to check if input is empty and thus resets the
+            input box styles and error message
+        */
         function isEmpty(element, errorId){
             const error = document.getElementById(errorId);
             if(element.value != ""){
@@ -185,11 +222,16 @@
                 error.classList.add("hidden");
             }
         }
-
+        /* 
+            creates function to automatically format phone to required format
+            if user inputs only the numbers without the dashes
+        */
         function formatPhone(element){
             const phoneValue = element.value;
             const numberOnly = /^\d{10}$/;
+            // if phone matches regex of only numbers
             if(numberOnly.test(phoneValue)){
+                // then it immediately adds dashes to the numbers
                 element.value = element.value.substring(0,3)+"-"+element.value.substring(3,6)+"-"+element.value.substring(6,11);
             }
         }

@@ -1,3 +1,11 @@
+<!-- 
+    Donate page is created to for users to support the organization (AEF).
+    Users are given a form that asks for their basic contact information and
+    the option to choose between donating an item to AEF for the gala or a
+    sponsorship donation of a monetary value. Using Javascript, this page
+    validates each input to make sure it follows the format and is not empty
+    if required and add functionality to buttons.
+ -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,6 +18,7 @@
         <script src="./scripts/nav-bar.js"></script>
 
         <style>
+            /* Adding media queries or viewports to change design based on device */
             body{
                 background: url(images/watercolor3.png), url(images/watercolor6.png);
                 background-size: 60%, 45%;
@@ -35,9 +44,9 @@
                 <li class="logo"><img src="images/aef_logo_c.png"></li>
                 <li><a href="gala.html">The Gala</a></li>
                 <li><a href="support.html">Support Us</a></li>
-                <li><a href="about.html">About AEF</a></li>
-                <li><a href="sponsors.html">Our Sponsors</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#about.html">About AEF</a></li>
+                <li><a href="#sponsors.html">Our Sponsors</a></li>
+                <li><a href="#contact.html">Contact Us</a></li>
                 <li class="icon"><a href="javascript:void(0);" class="icon" onclick="onMenuClick()"><img src="./images/hamburger.png"></a></li>
             </ul>
             </header>
@@ -301,15 +310,28 @@
     </body>
     <!--External Script -->
     <script type="text/javascript" src="scripts/support-form.js"></script>
-    <!-- Limit Characters for Number Input -->
+    <!-- Internal Script to Limit Characters for Number Input -->
     <script>
+        /*
+            creates function to limit the amount of digits the user can input
+            for inputs that ask for zipcode, credit card cvv, etc.
+        */
         function limitNum(element, max_chars) {
+            // if the current input has a length greater than the max digit allowed
             if(element.value.length >= max_chars) {
+                // immediately cut the the input and limit it to the max digit
                 element.value = element.value.substr(0, max_chars-1);
             }
         }
+        /*
+            creates function to validate inputs based on the regular expression
+            (regex) given then changes the style of the input border and adds
+            or removes the error message based on if the input is validated
+            or not
+        */
         function validate(element, pattern, errorId){
             const error = document.getElementById(errorId);
+            // checks if value is empty or matches regex
             if(element.value=="" || pattern.test(element.value)){
                 element.style.border = "1px solid black";
                 error.classList.add("hidden");
@@ -318,6 +340,10 @@
                 error.classList.remove("hidden");                
             }
         }
+        /*
+            creates function to check if input is empty and thus resets the
+            input box styles and error message
+        */
         function isEmpty(element, errorId){
             const error = document.getElementById(errorId);
             if(element.value != ""){
@@ -325,10 +351,16 @@
                 error.classList.add("hidden");
             }
         }
+        /*
+            creates function to automatically format phone to required format
+            if user inputs only the numbers without the dashes
+        */
         function formatPhone(element){
             const phoneValue = element.value;
             const numberOnly = /^\d{10}$/;
+            // if input matches regex of only numbers
             if(numberOnly.test(phoneValue)){
+                // immediately add dashes to the numbers, correcting the format
                 element.value = element.value.substring(0,3)+"-"+element.value.substring(3,6)+"-"+element.value.substring(6,11);
             }
         }
