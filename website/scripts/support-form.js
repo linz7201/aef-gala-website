@@ -219,3 +219,16 @@ function addChangeEventToRadioGroup(groupName) {
         });
     });
 }
+
+let currentHref = /#(.+)/.exec(window.location.href);
+if(currentHref && currentHref.length > 1) {
+    const formType = currentHref[1];
+    if(formType == 'donate'){
+        donateChoice.checked = true;
+        showForm();
+    }
+    if(formType == 'sponsor'){
+        sponsorChoice.checked = true;
+        showForm();
+    }
+}
