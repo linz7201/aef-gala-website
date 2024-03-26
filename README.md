@@ -8,6 +8,8 @@
 - Watercolor Stains by starline on Freepik (https://www.freepik.com/author/starline)
 - Five People Standing While Talking to Each Other by Antenna on Unsplash (https://unsplash.com/photos/five-person-standing-while-talking-each-other-ZDN-G1xBWHY)
 - People Inside Conference by Jakob Dalbjörn on Unsplash (https://unsplash.com/photos/people-inside-conference-cuKJre3nyYc)
+- Five Children Smiling While Doing Peace Hand Sign by Larm Rmah on Unsplash (https://unsplash.com/photos/five-children-smiling-while-doing-peace-hand-sign-AEaTUnvneik)
+- White and Brown Flowers on White Table by Annie Spratt on Unsplash (https://unsplash.com/photos/white-and-brown-flowers-on-white-table-TQSB-suJu1k)
   
 ## Software Used
 - [Visual Studio Code](url "https://code.visualstudio.com/") (IDE application used to develop, compile, and test our code)
