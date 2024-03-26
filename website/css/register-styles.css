@@ -436,10 +436,6 @@ input[type=number] {
         height: 50px;
     }
   
-    .header li:not(.logo,.icon){
-      display: none;
-    }
-  
     .header li:first-child {
         height: 50px;
     }

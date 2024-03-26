@@ -1,0 +1,183 @@
+<!--
+    The Contact Us page is created to give users an
+    easy and accessible way to reach the AEF team.
+    It is meant to allow visitors to express their
+    concerns, questions, and suggestions about the
+    AEF Gala. The page includes a contact form that
+    sends an email to the AEF Gala gmail account and
+    a carousel of the contact information of those
+    working on the AEF Gala.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AEF Gala - Contact Us</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/donate-styles.css">
+    <!--External Script -->
+    <script src="./scripts/nav-bar.js"></script>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="header" id="navbar">
+        <header>
+        <ul>
+            <li class="logo"><img src="images/aef_logo_c.png"></li>
+            <li><a href="gala.html">The Gala</a></li>
+            <li><a href="support.html">Support Us</a></li>
+            <li><a href="about.html">About AEF</a></li>
+            <li><a href="oursponsors.html">Our Sponsors</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li class="icon"><a href="javascript:void(0);" class="icon" onclick="onMenuClick()"><img src="./images/hamburger.png"></a></li>
+        </ul>
+        </header>
+    </div>
+    <div class="content">
+        <!-- content lies here -->
+
+        <img src="./images/topflowers.png" id="topflowers">
+
+        <section class="contacthero">
+            <h1>Contact Us</h1>
+            <p>Have a question or want to know more? Contact us!</p>
+        </section>
+
+        <div class="form-area">
+            <form class="contactform" name="input" method="post">
+                <section class="input name">
+                    <label for="fullName">Name <span class="asterisk">*</span></label>
+                    <input type="text" id="fullName" class="required" name="fullName" placeholder="John Doe" onchange="isEmpty(this, 'fullNameEmpty');">
+                    <small id="fullNameEmpty" class="errorMsg hidden">Input required</small>
+                </section>
+                <section class="input email">
+                    <label for="emailAddress">Email Address <span class="asterisk">*</span></label>
+                    <input type="text" id="emailAddress" class="required" name="emailAddress" placeholder="johndoe@email.com" onchange="isEmpty(this, 'emailAddressEmpty'); validate(this, /^[A-Za-z0-9._-]+\@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, 'emailError');">
+                    <small id="emailError" class="errorMsg hidden">Input must be a valid email</small>
+                    <small id="emailAddressEmpty"class="errorMsg hidden">Input required</small>
+                </section>
+                <section class="input message">
+                    <label for="itemDesc">Message <span class="asterisk">*</span></label>
+                    <input type="text" id="itemDesc" class="required hidden" name="itemDesc" placeholder="Put your message in here. We'd love to hear from you!" onchange="isEmpty(this, 'itemDescEmpty')">
+                    <small id="itemDescEmpty" class="err
+                    orMsg hidden">Input required</small>
+                </section>
+                <section id="submit">
+                    <input id="submit-form" type="submit" value="Submit">
+                </section>
+            </form>
+        </div>
+
+        <div class="contactcarousel">
+
+            <div class="contactp1">
+                <h1>Reach Us Here!</h1>
+                <section class="column1">
+                    <ul>
+                        <li>support@aef4kids.com</li>
+                        <li>(626) 943-3080</li>
+                        <li>1603 Chestnut Street Alhambra, CA 91803</li>
+                        <li>Mon-Fri 8AM-4PM</li>
+                    </ul>
+                </section>
+                <section class="column2">
+                    <ul>
+                        <li><a href="https://www.instagram.com/aef4kids?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./images/instagram.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/aef4kids?eid=ARAqSVb9qq_IHO6O2yPmLuli-qXn0Z8K9nQC-h7ahCwlXy4J5KJQ7nLIIES4IsnYtFyYTVqKRAItZ-kq"><img src="./images/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCCwoIYXVtG1D2bxsl2aiOXg"><img src="./images/youtube.png" alt="YouTube"></a></li>
+                        <li><a href="mailto:support@aef4kids.com"><img src="images/gmail.png" alt="Gmail"></a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="contactp2">
+                <h1>Michelle Alcala</h1>
+                <section>
+                    <ul>
+                        <li>Executive Assistant</li>
+                        <li>K-8 Academy Office Manager</li>
+                        <li>(626) 943-3080</li>
+                        <li>malcala@aef4kids.com</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="contactp3">
+                <h1>Priscilia Narducci</h1>
+                <section>
+                    <ul>
+                        <li>Office Assistant</li>
+                        <li>(626) 943-3082</li>
+                        <li>pnarducci@aef4kids.com</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="contactp4">
+                <h1>Amy Tambara</h1>
+                <section>
+                    <ul>
+                        <li>K-8 Academy Coordinator</li>
+                        <li>atambara@aef4kids.com</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="contactp5">
+                <h1>Bill Yee</h1>
+                <section>
+                    <ul>
+                        <li>High School Coordinator</li>
+                        <li>bill_yee@aef4kids.com</li>
+                    </ul>
+                </section>
+            </div>
+
+            <button id="next">></button>
+            <button id="prev"><</button>
+
+        </div>
+
+        <img src="./images/bottomflowers.png" id="bottomflowers">
+    </div>
+    <div class="footer">
+        <footer>
+            <table id="contact">
+                <tr >
+                    <td id="firstcontactcol">Contact</td>  <td id="lastcontactrcol"><a href="mailto:support@aef4kids.com">support@aef4kids.com</a></td>
+                </tr>
+              
+                <tr >
+                    <td id="firstcontactcol"><a href="tel:+16269433080">1(626) 943-3080</a></td>
+                <td id="lastcontactrcol"><a>Mon-Fri 8AM - 4PM</a></td>
+                </tr>
+
+                <tr>
+                   <td colspan="2">Copyright &#169; 2023 AEF Gala. All Rights Reserved.</td> 
+                </tr>
+                
+                
+            </table>
+            <ul id="footer-aef-logo">
+                <li><a href="https://www.aef4kids.com/"><img src="images/footerlogo.png"></a></li>
+                <!-- <li><img src="./images/aef_word.png"></li> -->
+            </ul>
+            <ul id="socials">
+                <!--<li><button id="subscribe">Subscribe to Our Newsletter</button></li>-->
+                <li><a href="https://maps.app.goo.gl/qEAL8jCuaeZ5Wijj8" target="_blank">1603 Chestnut Street, Alhambra, CA 91803</a></li>
+                <br>
+                <br>
+                <li><ul>
+                    <li><a href="https://www.instagram.com/aef4kids?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./images/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.facebook.com/aef4kids?eid=ARAqSVb9qq_IHO6O2yPmLuli-qXn0Z8K9nQC-h7ahCwlXy4J5KJQ7nLIIES4IsnYtFyYTVqKRAItZ-kq"><img src="./images/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="
+                        https://www.youtube.com/channel/UCCwoIYXVtG1D2bxsl2aiOXg"><img src="./images/youtube.png" alt="YouTube"></a></li>
+                     <li><a href="mailto:support@aef4kids.com"><img src="images/gmail.png" alt="Gmail"></a></li>
+                </ul></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

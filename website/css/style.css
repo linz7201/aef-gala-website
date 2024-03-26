@@ -619,10 +619,6 @@ footer {
     .header ul li{
         line-height: 50px;
     }
-  
-    .header li:not(.logo,.icon){
-      display: none;
-    }
 
     .header.responsive .icon, .header .icon img {
         right: 0;
