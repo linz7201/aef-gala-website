@@ -561,6 +561,65 @@ footer {
 
 /* our sponsors section */
 
+.oursponsors {
+    background-image: none;
+}
+
+.oursponsors-text p {
+    color: black;
+}
+
+.sponsorscarouselp1, .sponsorscarouselp2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-image: url(../images/wideblock.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    padding: 12% 8%;
+}
+
+.sponsorscarouselp1 .row1, .sponsorscarouselp1 .row2, .sponsorscarouselp2 .row1, .sponsorscarouselp2 .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: space-between;
+}
+
+.sponsorscarouselp1 .row1 img, .sponsorscarouselp1 .row2 img, .sponsorscarouselp2 .row1 img, .sponsorscarouselp2 .row2 img{
+    width: 12%;
+    background-color: #eaeaea;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+.sponsorscarouselp1 .row1 #ayc {
+    width: 8%;
+    height: 8%;
+    padding: 4%;
+}
+
+.sponsorscarousel #next, .sponsorscarousel #prev {
+    top: 75%;
+}
+
+.sponsorscarousel #next {
+    right: 10%;
+}
+
+.sponsorscarousel #prev {
+    left: 10%;
+}
+
+.oursponsors-text {
+    padding-bottom: 0;
+}
+
+.oursponcon #topflowers{
+    padding-top: 0;
+}
+
 @media (min-width:1100px) {
     /* desktop viewport */
 
