@@ -298,7 +298,7 @@ h1 {
     font-size: 300%;
 }
 
-.sponsor-carousel{
+#sponsor-carousel{
     position: relative;
     width: 85%;
     height: 520px;
@@ -349,7 +349,7 @@ h1 {
     border-radius: 50px;
 }
 
-.sponsor-carousel #sponsor-title{
+#sponsor-carousel #sponsor-title{
     font-size: 180%;
     margin-bottom: -5%;
     color:#c8a45f;
@@ -357,7 +357,7 @@ h1 {
     padding:1%
 }
 
-.sponsor-carousel #sponsor-price{
+#sponsor-carousel #sponsor-price{
     font-size: 310%;
     color:#699194;
     font-family: 'Times New Roman', Times, serif;
@@ -365,15 +365,15 @@ h1 {
     padding:1%;
 }
 
-.sponsor-carousel ul {
+#sponsor-carousel ul {
     list-style: none;
   }
 
-.sponsor-carousel ul li{
+#sponsor-carousel ul li{
     margin-bottom: 4%;
 }
   
- .sponsor-carousel ul li:before {
+ #sponsor-carousel ul li:before {
     content: '✓';
     color:#699194
   }
@@ -576,7 +576,7 @@ footer {
     color: black;
 }
 
-.sponsorscarouselp1, .sponsorscarouselp2 {
+.sponsorsItem {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -587,35 +587,35 @@ footer {
     padding: 12% 8%;
 }
 
-.sponsorscarouselp1 .row1, .sponsorscarouselp1 .row2, .sponsorscarouselp2 .row1, .sponsorscarouselp2 .row2 {
+.sponsorsItem .row1, .sponsorsItem .row2 {
     display: flex;
     flex-wrap: wrap;
     gap: 5%;
     justify-content: space-between;
 }
 
-.sponsorscarouselp1 .row1 img, .sponsorscarouselp1 .row2 img, .sponsorscarouselp2 .row1 img, .sponsorscarouselp2 .row2 img{
+.sponsorsItem .row1 img, .sponsorsItem .row2 img {
     width: 12%;
     background-color: #eaeaea;
     border-radius: 15px;
     padding: 2%;
 }
 
-.sponsorscarouselp1 .row1 #ayc {
+.sponsorsItem .row1 #ayc {
     width: 8%;
     height: 8%;
     padding: 4%;
 }
 
-.sponsorscarousel #next, .sponsorscarousel #prev {
+#sponsors-carousel #next, #sponsors-carousel #prev {
     top: 75%;
 }
 
-.sponsorscarousel #next {
+#sponsors-carousel #next {
     right: 10%;
 }
 
-.sponsorscarousel #prev {
+#sponsors-carousel #prev {
     left: 10%;
 }
 
@@ -918,7 +918,7 @@ label {
         margin-top: 3%;
     }
 
-    .sponsor-carousel {
+    #sponsor-carousel {
         margin-top: 5%;
     }
 
