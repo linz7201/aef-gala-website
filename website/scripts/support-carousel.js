@@ -1,5 +1,5 @@
 // declares variables
-let items = document.querySelectorAll('.sponsor-carousel .sponsorItem');
+let items = document.querySelectorAll('.carousel .carouselItem');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let width = window.innerWidth;
@@ -17,6 +17,7 @@ function loadShow(isBig){
     items[active].style.zIndex = 1;
     items[active].style.filter = 'none';
     items[active].style.opacity = 1;
+    items[active].style.display = '';
     // for loop to configure the items that are to the right of the current item
     if(isBig){
         for(var i = active + 1; i < items.length; i++){
@@ -45,6 +46,7 @@ function loadShow(isBig){
             } else {
                 items[i].style.opacity = 0;
                 items[i].style.transform = ``;
+                //items[i].style.display = 'none'; // fixes the oursponsors carousel stack problem
             }
         }
     }
@@ -52,8 +54,12 @@ function loadShow(isBig){
 
 // runs the function show the design on load
 function loadCorrectCarousel() {
-    width = window.innerWidth;
-    loadShow(width > 850);
+    if(items.length < 3) { 
+        loadShow(false);
+    } else {
+        width = window.innerWidth;
+        loadShow(width > 850);
+    }
 }
 
 loadCorrectCarousel();
@@ -62,10 +68,19 @@ window.addEventListener('resize', loadCorrectCarousel);
 // runs following fuction if the next button is clicked
 next.onclick = function(){
     active = active + 1 < items.length ? active + 1 : active;
-    loadShow(width > 850);
+    loadCorrectCarousel();
 }
 // runs following function if the previous button is clicked
 prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : active;
-    loadShow(width > 850);
+    loadCorrectCarousel();
+}
+
+function loopChangeItem() {
+    setTimeout(loopChangeItem, 5000);
+    loadCorrectCarousel();
+    active = active + 1 < items.length ? active + 1 : active = 0;
+}
+if(!document.getElementById('sponsor-carousel')) {
+    loopChangeItem();
 }

@@ -42,8 +42,8 @@
 
         <img src="./images/topflowers.png" id="topflowers">
 
-        <div class="sponsorscarousel">
-            <section class="sponsorscarouselp1">
+        <div class="carousel" id="sponsors-carousel">
+            <section class="sponsorsItem carouselItem">
                 <section class="row1">
                     <img src="./images/ausd.png">
                     <img src="./images/huckabee.png">
@@ -59,7 +59,7 @@
                     <img src="./images/ratkovich.png">
                 </section>
             </section>
-            <section class="sponsorscarouselp2">
+            <section class="sponsorsItem carouselItem">
                 <section class="row1">
                     <img src="./images/tbp.png">
                     <img src="./images/transtech.png">
@@ -120,4 +120,11 @@
         </footer>
     </div>
 </body>
+<!-- External Script for Interactive Carousel -->
+<!-- 
+    The script is linked towards the end or after the body element in
+    order to allow the whole document and its images to load before 
+    enabling the functions for the buttons and animations
+ -->
+ <script src="./scripts/support-carousel.js"></script>
 </html>
