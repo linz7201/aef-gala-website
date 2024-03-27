@@ -83,7 +83,7 @@ header {
     text-align:center;
 }
 
-.content p, .content li{
+.content p{
     font-size: larger;
     padding-left: 20px;
     padding-right:20px;
@@ -548,6 +548,7 @@ footer {
     text-align: left;
     list-style: disc;
     line-height: 25px;
+    font-size: larger;
 }
 
 .column2 ul{
@@ -563,6 +564,11 @@ footer {
 
 .oursponsors {
     background-image: none;
+}
+
+.oursponsors h1 {
+    font-size: 700%;
+    margin-bottom: 10px;
 }
 
 .oursponsors-text p {
@@ -618,6 +624,65 @@ footer {
 
 .oursponcon #topflowers{
     padding-top: 0;
+}
+
+/* contact section */
+
+.contacthero {
+    background-image: none;
+    margin-bottom: 20px;
+}
+
+.contacthero h1 {
+    height: 150px;
+    font-size: 700%;
+}
+
+.contactform {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.message input{
+    height: 170px;
+    border-radius: 19px;
+}
+
+.contactform #submit {
+    width: 100%;
+}
+
+label {
+    margin-bottom: 2px;
+}
+
+.concon #topflowers, .concon #bottomflowers {
+    width: 90%;
+}
+
+/* contact cards :-) */
+
+.contactp1, .contactp2, .contactp3, .contactp4, .contactp5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contactcarousel .row2 {
+    display: flex;
+    text-align: left;
+}
+
+.contactcarousel .column2 {
+    width: fit-content;
+    background-image: none;
+}
+
+.contactcarousel .column2 ul li{
+    list-style-type: none;
 }
 
 @media (min-width:1100px) {

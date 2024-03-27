@@ -212,6 +212,14 @@ select {
   flex-grow: 1;
 }
 
+section.input.name {
+  margin-top: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
 .contactInput {
   display: flex;
   position: relative;
@@ -428,6 +436,36 @@ select {
   width: 20%;
   flex-grow: 1;
   min-width: 50px;
+}
+
+/* Configuring customized radio buttons */
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: 3px;
+  left: -3px;
+  position: relative;
+  background-color: #f2f2f2;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: 3px;
+  left: -3px;
+  position: relative;
+  background-color: #dbbd83;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
 
 /* Configuring submit button */

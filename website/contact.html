@@ -35,7 +35,7 @@
         </ul>
         </header>
     </div>
-    <div class="content">
+    <div class="concon content">
         <!-- content lies here -->
 
         <img src="./images/topflowers.png" id="topflowers">
@@ -48,20 +48,20 @@
         <div class="form-area">
             <form class="contactform" name="input" method="post">
                 <section class="input name">
-                    <label for="fullName">Name <span class="asterisk">*</span></label>
-                    <input type="text" id="fullName" class="required" name="fullName" placeholder="John Doe" onchange="isEmpty(this, 'fullNameEmpty');">
-                    <small id="fullNameEmpty" class="errorMsg hidden">Input required</small>
+                    <label for="conFullName">Name <span class="asterisk">*</span></label>
+                    <input type="text" id="conFullName" class="required" name="conFullName" placeholder="John Doe" onchange="isEmpty(this, 'conFullNameEmpty');">
+                    <small id="conFullNameEmpty" class="errorMsg hidden">Input required</small>
                 </section>
                 <section class="input email">
-                    <label for="emailAddress">Email Address <span class="asterisk">*</span></label>
-                    <input type="text" id="emailAddress" class="required" name="emailAddress" placeholder="johndoe@email.com" onchange="isEmpty(this, 'emailAddressEmpty'); validate(this, /^[A-Za-z0-9._-]+\@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, 'emailError');">
+                    <label for="conEmail">Email Address <span class="asterisk">*</span></label>
+                    <input type="text" id="conEmail" class="required" name="conEmail" placeholder="johndoe@email.com" onchange="isEmpty(this, 'conEmailEmpty'); validate(this, /^[A-Za-z0-9._-]+\@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, 'emailError');">
                     <small id="emailError" class="errorMsg hidden">Input must be a valid email</small>
-                    <small id="emailAddressEmpty"class="errorMsg hidden">Input required</small>
+                    <small id="conEmailEmpty"class="errorMsg hidden">Input required</small>
                 </section>
                 <section class="input message">
-                    <label for="itemDesc">Message <span class="asterisk">*</span></label>
-                    <input type="text" id="itemDesc" class="required hidden" name="itemDesc" placeholder="Put your message in here. We'd love to hear from you!" onchange="isEmpty(this, 'itemDescEmpty')">
-                    <small id="itemDescEmpty" class="err
+                    <label for="conMessage">Message <span class="asterisk">*</span></label>
+                    <input type="text" id="conMessage" class="required" name="conMessage"  onchange="isEmpty(this, 'conMessageEmpty')">
+                    <small id="conMessageEmpty" class="err
                     orMsg hidden">Input required</small>
                 </section>
                 <section id="submit">
@@ -74,21 +74,23 @@
 
             <div class="contactp1">
                 <h1>Reach Us Here!</h1>
-                <section class="column1">
-                    <ul>
-                        <li>support@aef4kids.com</li>
-                        <li>(626) 943-3080</li>
-                        <li>1603 Chestnut Street Alhambra, CA 91803</li>
-                        <li>Mon-Fri 8AM-4PM</li>
-                    </ul>
-                </section>
-                <section class="column2">
-                    <ul>
-                        <li><a href="https://www.instagram.com/aef4kids?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./images/instagram.png" alt="Instagram"></a></li>
-                        <li><a href="https://www.facebook.com/aef4kids?eid=ARAqSVb9qq_IHO6O2yPmLuli-qXn0Z8K9nQC-h7ahCwlXy4J5KJQ7nLIIES4IsnYtFyYTVqKRAItZ-kq"><img src="./images/facebook.png" alt="Facebook"></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCCwoIYXVtG1D2bxsl2aiOXg"><img src="./images/youtube.png" alt="YouTube"></a></li>
-                        <li><a href="mailto:support@aef4kids.com"><img src="images/gmail.png" alt="Gmail"></a></li>
-                    </ul>
+                <section class="row2">
+                    <section class="column1">
+                        <ul>
+                            <li>support@aef4kids.com</li>
+                            <li>(626) 943-3080</li>
+                            <li>1603 Chestnut Street Alhambra, CA 91803</li>
+                            <li>Mon-Fri 8AM-4PM</li>
+                        </ul>
+                    </section>
+                    <section class="column2">
+                        <ul>
+                            <li><a href="https://www.instagram.com/aef4kids?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./images/instagram.png" alt="Instagram"></a></li>
+                            <li><a href="https://www.facebook.com/aef4kids?eid=ARAqSVb9qq_IHO6O2yPmLuli-qXn0Z8K9nQC-h7ahCwlXy4J5KJQ7nLIIES4IsnYtFyYTVqKRAItZ-kq"><img src="./images/facebook.png" alt="Facebook"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCCwoIYXVtG1D2bxsl2aiOXg"><img src="./images/youtube.png" alt="YouTube"></a></li>
+                            <li><a href="mailto:support@aef4kids.com"><img src="images/gmail.png" alt="Gmail"></a></li>
+                        </ul>
+                    </section>
                 </section>
             </div>
 
