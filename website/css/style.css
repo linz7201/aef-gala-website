@@ -83,7 +83,7 @@ header {
     text-align:center;
 }
 
-.content p{
+.content p, .content li{
     font-size: larger;
     padding-left: 20px;
     padding-right:20px;
@@ -295,7 +295,6 @@ h1 {
 
 .supportflex h1{
     font-size: 300%;
-    
 }
 
 .sponsor-carousel{
@@ -377,8 +376,6 @@ h1 {
     content: '✓';
     color:#699194
   }
-
-
 
 #topflowers{
     width: 100%;
@@ -502,6 +499,68 @@ footer {
    color: black; 
 }
 
+/* about aef section */
+
+.aef-text {
+    margin: 1% 0;
+}
+
+.aef {
+    background-image: url(../images/aefhero.png);
+}
+
+.aefflex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row1 {
+    display: flex;
+    gap: 5%;
+}
+
+.column1, .column2{
+    width: 45%;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 3;
+    gap: 5%;
+}
+
+.column2{
+    background-image: url(../images/thinblock.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 3;
+    flex-shrink: 1;
+}
+
+.column2 li {
+    padding: 0;
+    text-align: left;
+    list-style: disc;
+    line-height: 25px;
+}
+
+.column2 ul{
+    margin-left: 23%;
+    width: 65%;
+}
+
+.row2 {
+    margin-top: 5%;
+}
+
+/* our sponsors section */
+
 @media (min-width:1100px) {
     /* desktop viewport */
 
@@ -564,7 +623,7 @@ footer {
         font-size: 300%;
     }
 
-    .content p, .header li a, #herobutton, .donatebutton, .hero-text p, .footer{
+    .content p, .content li, .header li a, #herobutton, .donatebutton, .hero-text p, .footer{
         font-size: medium;
     }
 
@@ -576,7 +635,7 @@ footer {
         font-size: x-large;
     }
 
-    .hero h1{
+    .hero h1, .aef h1{
         font-size: 700%;
     }
 
@@ -653,7 +712,7 @@ footer {
         font-size: 200%;
     }
 
-    .content p, .header li a, #herobutton, .donatebutton, .hero-text p, .footer, .support-text p{
+    .content p, .content li, .header li a, #herobutton, .donatebutton, .hero-text p, .footer, .support-text p{
         font-size: small;
     }
 
