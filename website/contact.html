@@ -18,7 +18,17 @@
     <link rel="stylesheet" type="text/css" href="css/donate-styles.css">
     <!--External Script -->
     <script src="./scripts/nav-bar.js"></script>
+    <script src="./scripts/contact-carousel.js"></script>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Adding media queries or viewports to change design based on device */
+        body{
+            background: url(images/watercolor3.png), url(images/watercolor4.png);
+            background-size: 70%, 55%;
+            background-position: left -110% top -20%, right -55% bottom -10%;
+            background-repeat: no-repeat;
+        }
+    </style>  
 </head>
 
 <body>
@@ -72,7 +82,11 @@
 
         <div class="contactcarousel">
 
-            <div class="contactp1">
+            <button id="prev"><</button>
+
+            <div class="conconcar">
+
+            <div id="contactp1">
                 <h1>Reach Us Here!</h1>
                 <section class="row2">
                     <section class="column1">
@@ -94,7 +108,7 @@
                 </section>
             </div>
 
-            <div class="contactp2">
+            <div id="contactp2">
                 <h1>Michelle Alcala</h1>
                 <section>
                     <ul>
@@ -106,7 +120,7 @@
                 </section>
             </div>
 
-            <div class="contactp3">
+            <div id="contactp3">
                 <h1>Priscilia Narducci</h1>
                 <section>
                     <ul>
@@ -117,7 +131,7 @@
                 </section>
             </div>
 
-            <div class="contactp4">
+            <div id="contactp4">
                 <h1>Amy Tambara</h1>
                 <section>
                     <ul>
@@ -127,7 +141,7 @@
                 </section>
             </div>
 
-            <div class="contactp5">
+            <div id="contactp5">
                 <h1>Bill Yee</h1>
                 <section>
                     <ul>
@@ -137,8 +151,9 @@
                 </section>
             </div>
 
+            </div>
+
             <button id="next">></button>
-            <button id="prev"><</button>
 
         </div>
 

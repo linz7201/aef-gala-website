@@ -21,10 +21,11 @@ html {
 .header {
   background-color: white;
   color: black;
-  position: relative;
+  position: sticky;
   top: 0;
   width: 100%;
   height: 70px;
+  z-index: 999;
 }
 
 header {
