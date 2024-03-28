@@ -3,7 +3,10 @@ let items = document.querySelectorAll('.carousel .carouselItem');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let width = window.innerWidth;
-let paused = false;
+let willLoop = !document.getElementById('sponsor-carousel') && !document.getElementById('contact-carousel');
+
+let ftl = false;
+let ltf = false;
 
 let active = 0;
 /*
@@ -20,7 +23,7 @@ function loadShow(isBig){
     items[active].style.opacity = 1;
     items[active].style.display = '';
     // for loop to configure the items that are to the right of the current item
-    if(isBig){
+    if(isBig && !ltf && !ftl){
         for(var i = active + 1; i < items.length; i++){
             index++;
             // as i increases from current index to rightmost index, it configures the style for each index
@@ -58,6 +61,20 @@ function loadShow(isBig){
                 //items[i].style.display = 'none'; // alt solution to oursponsors carousel stack problem
             }
         }
+        if(!willLoop){
+            if(ftl){
+                items[items.length-2].style.transform = `translateX(${-120}px) scale(${!document.getElementById('contact-carousel') ? (1 - 0.2) : (1 - 0.5)}) perspective(16px) rotateY(1deg)`;
+                items[items.length-2].style.zIndex = -1;
+                items[items.length-2].style.filter = 'blur(5px)';
+                items[items.length-2].style.opacity = 0.6;
+            } else if (ltf) {
+                items[1].style.transform = `translateX(${120}px) scale(${!document.getElementById('contact-carousel') ? (1 - 0.2) : (1 - 0.5)}) perspective(16px) rotateY(-1deg)`;
+                items[1].style.zIndex = -1;
+                items[1].style.filter = 'blur(5px)';
+                items[1].style.opacity = 0.6;
+            }
+        }
+        ftl = ltf = false;
     }
 }
 
@@ -76,21 +93,25 @@ loadCorrectCarousel();
 window.addEventListener('resize', loadCorrectCarousel);
 // runs following fuction if the next button is clicked
 next.onclick = function(){
-    active = active + 1 < items.length ? active + 1 : active = 0;
+    // ftltf -> first to last / last to first, fixes odd transition
+    ltf = active + 1 >= items.length;
+    active = active + 1 < items.length ? active + 1 : (active = 0);
     loadCorrectCarousel();
 }
 // runs following function if the previous button is clicked
 prev.onclick = function(){
-    active = active - 1 >= 0 ? active - 1 : active = items.length-1;
+    ftl = active - 1 < 0;
+    active = active - 1 >= 0 ? active - 1 : (active = items.length-1);
     loadCorrectCarousel();
 }
 
 function loopChangeItem() {
     setTimeout(loopChangeItem, 5000); // adjust milliseconds to time until change
-    active = active + 1 < items.length ? active + 1 : active = 0;
+    ltf = active + 1 >= items.length;
+    active = active + 1 < items.length ? active + 1 : (active = 0);
     loadCorrectCarousel();
 }
-if(!document.getElementById('sponsor-carousel') && !document.getElementById('contact-carousel')) {
+if(willLoop) {
     active = -1;
     loopChangeItem();
 }
