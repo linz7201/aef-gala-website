@@ -3,7 +3,7 @@ let items = document.querySelectorAll('.carousel .carouselItem');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let width = window.innerWidth;
-let willLoop = !document.getElementById('sponsor-carousel') && !document.getElementById('contact-carousel');
+let willLoop = !document.getElementById('contact-carousel');
 
 let ftl = false;
 let ltf = false;
@@ -27,9 +27,9 @@ function loadShow(isBig){
         for(var i = active + 1; i < items.length; i++){
             index++;
             // as i increases from current index to rightmost index, it configures the style for each index
-            if(!document.getElementById('contact-carousel')) {
+            if(!document.getElementById('contact-carousel') && index <= 1) {
                 items[i].style.transform = `translateX(${120*index}px) scale(${1 - 0.2*index}) perspective(16px) rotateY(-1deg)`;
-            } else {
+            } else if (index <= 1) {
                 items[i].style.transform = `translateX(${120*index}px) scale(${1 - 0.5*index}) perspective(16px) rotateY(-1deg)`;
             }
             items[i].style.zIndex = -index;
@@ -42,9 +42,9 @@ function loadShow(isBig){
         index = 0;
         for(var i = active - 1; i >= 0; i--){
             index++;
-            if(!document.getElementById('contact-carousel')) {
+            if(!document.getElementById('contact-carousel') && index <= 1) {
                 items[i].style.transform = `translateX(${-120*index}px) scale(${1 - 0.2*index}) perspective(16px) rotateY(1deg)`;
-            } else {
+            } else if (index <= 1) {
                 items[i].style.transform = `translateX(${-120*index}px) scale(${1 - 0.5*index}) perspective(16px) rotateY(1deg)`;
             }
             items[i].style.zIndex = -index;
@@ -58,11 +58,12 @@ function loadShow(isBig){
             } else {
                 items[i].style.opacity = 0;
                 items[i].style.transform = ``;
-                //items[i].style.display = 'none'; // alt solution to oursponsors carousel stack problem
+                // items[i].style.display = 'none'; // alt solution to oursponsors carousel stack problem
             }
         }
-        if(!willLoop){
+        if(!document.getElementById('sponsors-carousel')){
             if(ftl){
+                console.log('running front to last');
                 items[items.length-2].style.transform = `translateX(${-120}px) scale(${!document.getElementById('contact-carousel') ? (1 - 0.2) : (1 - 0.5)}) perspective(16px) rotateY(1deg)`;
                 items[items.length-2].style.zIndex = -1;
                 items[items.length-2].style.filter = 'blur(5px)';
@@ -106,7 +107,11 @@ prev.onclick = function(){
 }
 
 function loopChangeItem() {
-    setTimeout(loopChangeItem, 5000); // adjust milliseconds to time until change
+    if(!document.getElementById('support-carousel')){ // sets 5 second timeout for our sponsors page
+        setTimeout(loopChangeItem, 5000); // adjust milliseconds to time until change
+    } else { // sets 3 second timeout for support types carousel
+        setTimeout(loopChangeItem, 3000); 
+    }
     ltf = active + 1 >= items.length;
     active = active + 1 < items.length ? active + 1 : (active = 0);
     loadCorrectCarousel();
