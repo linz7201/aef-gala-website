@@ -905,10 +905,68 @@ label {
         margin-bottom: 0;
     }
 
+    .oursponsors-text h1 {
+        margin-bottom: 7%;
+    }
+
 }
 
 @media (max-width:700px)  { 
     /* phone viewport */
+
+    .oursponsors .oursponsors-text h1 {
+        font-size: 300%;
+        margin-bottom: 10%;
+        line-height: 50px;
+    }
+
+    .sponcarp1, .sponcarp2 {
+        background-image: url(../images/thinblock.png);
+        padding: 15% 10%;
+        gap: 5%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 140%;
+    }
+
+    .sponcarp1 .row1, .sponcarp1 .row2, .sponcarp2 .row1, .sponcarp2 .row2 {
+        justify-content: space-evenly;
+        width: 50%;
+        flex-wrap: wrap;
+        display: flex;
+        margin: 0;
+        gap: 5%;
+    }
+
+    .content.oursponcon {
+        width: 95%
+    }
+
+    #sponsors-carousel {
+        margin-bottom: 42%;
+    }
+
+    #sponsors-carousel #next, #sponsors-carousel #prev {
+        margin-top: 55%;
+    }
+
+    .sponcarp1 .row1 img, .sponcarp1 .row2 img, .sponcarp2 .row1 img, .sponcarp2 .row2 img {
+        width: 70%;
+        gap: 5%;
+    }
+
+    .sponcarp1 .row1 #ayc {
+        width: 66%;
+        height: 13.33%;
+    }
+
+    .sponcarp2 {
+        margin-top: -211.1%;
+    }
+
+    .oursponsors-text.support-text {
+        padding: 0;
+    }
 
     .aefflex .row1 {
         flex-wrap: wrap;
