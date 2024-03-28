@@ -645,6 +645,26 @@ footer {
 
 /* contact section */
 
+#contactp1 {
+    z-index: 6;
+}
+
+#contactp2 {
+    z-index: 5;
+}
+
+#contactp3 {
+    z-index: 4;
+}
+
+#contactp4 {
+    z-index: 3;
+}
+
+#contactp5 {
+    z-index: 2;
+}
+
 .contacthero {
     background-image: none;
     margin-bottom: 20px;
@@ -693,7 +713,12 @@ label {
 }
 
 .conconcar {
-    width: 100%;
+    width: 75%;
+    height: 250px;
+}
+
+.concon #bottomflowers {
+    margin-top: 30%;
 }
 
 #contactp1, #contactp2, #contactp3, #contactp4, #contactp5 {
@@ -703,9 +728,11 @@ label {
     background-image: url(../images/wideblock.png);
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 50px;
+    border-radius: 80px;
     padding: 8%;
     height: 250px;
+    position: absolute;
+    width: 40%;
 }
 
 .contactcarousel .row2 {
@@ -749,8 +776,8 @@ label {
 
 .contactcarousel #next, .contactcarousel #prev {
     position: inherit;
-    align-self: start;
-    margin-top: 150px;
+    align-self: center;
+    margin-top: 20%;
 }
 
 @media (min-width:1100px) {
