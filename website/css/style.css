@@ -651,6 +651,16 @@ footer {
 
 /* contact section */
 
+.contactItem .titles {
+    margin-bottom: 5%;
+    text-transform: Uppercase;
+    font-weight: bold;
+}
+
+.contactItem a {
+    color: #588781;
+}
+
 #contactp1 {
     z-index: 6;
 }
@@ -790,6 +800,10 @@ label {
     transition: 0.5s;
 }
 
+.contactItem .address a {
+    color: black;
+}
+
 @media (min-width:1100px) {
     /* desktop viewport */
 
@@ -810,7 +824,6 @@ label {
             font-size: 400%;
         }
     }
-
 }
 
 @media (max-width:1100px)  { 
@@ -1193,5 +1206,9 @@ label {
 
     .sponsor h1{
         margin-top: 55px;
+    }
+
+    .address {
+        margin-bottom: 5%;
     }
 }
