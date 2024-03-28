@@ -712,7 +712,7 @@ label {
 
 /* contact cards :-) */
 
-.contactcarousel {
+#contact-carousel {
     display: flex;
     justify-content: space-between;
     gap: 10%;
@@ -741,13 +741,13 @@ label {
     width: 40%;
 }
 
-.contactcarousel .row2 {
+#contact-carousel .row2 {
     display: flex;
     text-align: left;
     justify-content: space-between;
 }
 
-.contactcarousel .column2 {
+#contact-carousel .column2 {
     width: fit-content;
     background-image: none;
     align-items: end;
@@ -755,35 +755,39 @@ label {
     margin-top: -3%;
 }
 
-.contactcarousel .column2 ul li{
+#contact-carousel .column2 ul li{
     list-style-type: none;
     width: fit-content;
 }
 
-.contactcarousel .column2 ul {
+#contact-carousel .column2 ul {
     width: fit-content;
     margin: 0;
     height: 100%;
 }
 
-.contactcarousel .column1 ul {
+#contact-carousel .column1 ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 80%;
 }
 
-.contactcarousel ul {
+#contact-carousel ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     line-height: 25px;
 }
 
-.contactcarousel #next, .contactcarousel #prev {
+#contact-carousel #next, #contact-carousel #prev {
     position: inherit;
     align-self: center;
     margin-top: 20%;
+}
+
+.contactItem {
+    transition: 0.5s;
 }
 
 @media (min-width:1100px) {

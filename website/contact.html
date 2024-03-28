@@ -80,13 +80,13 @@
             </form>
         </div>
 
-        <div class="contactcarousel">
+        <div id="contact-carousel" class="carousel">
 
             <button id="prev"><</button>
 
             <div class="conconcar">
 
-            <div id="contactp1">
+            <div id="contactp1" class="contactItem carouselItem">
                 <h1>Reach Us Here!</h1>
                 <section class="row2">
                     <section class="column1">
@@ -108,7 +108,7 @@
                 </section>
             </div>
 
-            <div id="contactp2">
+            <div id="contactp2" class="contactItem carouselItem">
                 <h1>Michelle Alcala</h1>
                 <section>
                     <ul>
@@ -120,7 +120,7 @@
                 </section>
             </div>
 
-            <div id="contactp3">
+            <div id="contactp3" class="contactItem carouselItem">
                 <h1>Priscilia Narducci</h1>
                 <section>
                     <ul>
@@ -131,7 +131,7 @@
                 </section>
             </div>
 
-            <div id="contactp4">
+            <div id="contactp4" class="contactItem carouselItem">
                 <h1>Amy Tambara</h1>
                 <section>
                     <ul>
@@ -141,7 +141,7 @@
                 </section>
             </div>
 
-            <div id="contactp5">
+            <div id="contactp5" class="contactItem carouselItem">
                 <h1>Bill Yee</h1>
                 <section>
                     <ul>
@@ -197,4 +197,11 @@
         </footer>
     </div>
 </body>
+<!-- External Script for Interactive Carousel -->
+<!-- 
+    The script is linked towards the end or after the body element in
+    order to allow the whole document and its images to load before 
+    enabling the functions for the buttons and animations
+ -->
+ <script src="./scripts/support-carousel.js"></script>
 </html>

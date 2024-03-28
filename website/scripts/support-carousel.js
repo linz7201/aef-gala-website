@@ -3,6 +3,7 @@ let items = document.querySelectorAll('.carousel .carouselItem');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let width = window.innerWidth;
+let paused = false;
 
 let active = 0;
 /*
@@ -23,7 +24,11 @@ function loadShow(isBig){
         for(var i = active + 1; i < items.length; i++){
             index++;
             // as i increases from current index to rightmost index, it configures the style for each index
-            items[i].style.transform = `translateX(${120*index}px) scale(${1 - 0.2*index}) perspective(16px) rotateY(-1deg)`;
+            if(!document.getElementById('contact-carousel')) {
+                items[i].style.transform = `translateX(${120*index}px) scale(${1 - 0.2*index}) perspective(16px) rotateY(-1deg)`;
+            } else {
+                items[i].style.transform = `translateX(${120*index}px) scale(${1 - 0.5*index}) perspective(16px) rotateY(-1deg)`;
+            }
             items[i].style.zIndex = -index;
             items[i].style.filter = 'blur(5px)';
             // the "index > 1" is treated as a condition, the "?" means that the opacity will be set to 0 if the condition 
@@ -34,7 +39,11 @@ function loadShow(isBig){
         index = 0;
         for(var i = active - 1; i >= 0; i--){
             index++;
-            items[i].style.transform = `translateX(${-120*index}px) scale(${1 - 0.2*index}) perspective(16px) rotateY(1deg)`;
+            if(!document.getElementById('contact-carousel')) {
+                items[i].style.transform = `translateX(${-120*index}px) scale(${1 - 0.2*index}) perspective(16px) rotateY(1deg)`;
+            } else {
+                items[i].style.transform = `translateX(${-120*index}px) scale(${1 - 0.5*index}) perspective(16px) rotateY(1deg)`;
+            }
             items[i].style.zIndex = -index;
             items[i].style.filter = 'blur(5px)';
             items[i].style.opacity = index > 1 ? 0 : 0.6;
@@ -78,9 +87,10 @@ prev.onclick = function(){
 
 function loopChangeItem() {
     setTimeout(loopChangeItem, 5000); // adjust milliseconds to time until change
-    loadCorrectCarousel();
     active = active + 1 < items.length ? active + 1 : active = 0;
+    loadCorrectCarousel();
 }
-if(!document.getElementById('sponsor-carousel')) {
+if(!document.getElementById('sponsor-carousel') && !document.getElementById('contact-carousel')) {
+    active = -1;
     loopChangeItem();
 }
