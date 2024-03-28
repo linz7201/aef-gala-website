@@ -306,6 +306,14 @@ h1 {
     margin: auto;
 }
 
+.sponcarp1 {
+    z-index: 2;
+}
+
+.sponcarp2 {
+    margin-top: -55%;
+}
+
 .sponsorItem{
     position: absolute;
     text-align: justify;
@@ -563,6 +571,26 @@ footer {
 
 /* our sponsors section */
 
+.content.oursponcon {
+    width: 100%;
+}
+
+.oursponcon #topflowers, .oursponcon #bottomflowers {
+    width: 50%;
+}
+
+#sponsors-carousel {
+    display: flex;
+    width: 80%;
+    gap: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#sponsors-carousel #next, #sponsors-carousel #prev {
+    position: static;
+}
+
 .oursponsors {
     background-image: none;
 }
@@ -605,18 +633,6 @@ footer {
     width: 8%;
     height: 8%;
     padding: 4%;
-}
-
-#sponsors-carousel #next, #sponsors-carousel #prev {
-    top: 75%;
-}
-
-#sponsors-carousel #next {
-    right: 10%;
-}
-
-#sponsors-carousel #prev {
-    left: 10%;
 }
 
 .oursponsors-text {
@@ -834,10 +850,42 @@ label {
     .footer img {
         margin: 10% 0 30% 0;
     }
+
+    .aef h1 {
+        line-height: 120px;
+        margin: 7% 0;
+    }
 }
 
 @media (max-width:700px)  { 
     /* phone viewport */
+
+    .sponsor #next, .sponsor #prev {
+        z-index: 999;
+    }
+
+    .sponsor #next {
+        right: 0;
+    }
+
+    .sponsor #prev {
+        left: 0;
+    }
+
+    .sponsorItem {
+        left: calc(50% - 115px);
+    }
+
+    .support h1, .aef h1 {
+        line-height: 125px;
+        margin: 15% 0;
+        padding-top: 15%;
+    }
+
+    .aef h1, .oursponsors h1 {
+        line-height: 95px;
+        margin-top: 15%;
+    }
 
     .header .icon img, .header .logo img{
       height: 30px;

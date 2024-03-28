@@ -730,6 +730,10 @@ input[type=number] {
   
   /* phone viewport */
 
+  .intro h1, .form-area h1 {
+    line-height: 40px;
+  }
+
   .header .icon img, .header .logo img{
     height: 30px;
   }
