@@ -76,12 +76,12 @@ loadCorrectCarousel();
 window.addEventListener('resize', loadCorrectCarousel);
 // runs following fuction if the next button is clicked
 next.onclick = function(){
-    active = active + 1 < items.length ? active + 1 : active;
+    active = active + 1 < items.length ? active + 1 : active = 0;
     loadCorrectCarousel();
 }
 // runs following function if the previous button is clicked
 prev.onclick = function(){
-    active = active - 1 >= 0 ? active - 1 : active;
+    active = active - 1 >= 0 ? active - 1 : active = items.length-1;
     loadCorrectCarousel();
 }
 
