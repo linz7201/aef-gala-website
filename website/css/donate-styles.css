@@ -642,7 +642,7 @@ input[type=number] {
 
 
 /* Media Queries and Viewports for device adaptability */
-@media (min-width:1200px) {
+@media (min-width:1100px) {
   
   /* desktop viewport */
 
@@ -652,9 +652,19 @@ input[type=number] {
 
 }
 
-@media (max-width:1200px)  { 
+@media (max-width:1200px) {
+  .intro {
+    width: 700px;
+  }
+}
+
+@media (max-width:1100px)  { 
   
   /* tablet viewport */ 
+
+  .intro {
+    width: 50%;
+  }
   
   .header a:not(.icon){
       display: none;
@@ -730,6 +740,21 @@ input[type=number] {
   
   /* phone viewport */
 
+  #contactp1, #contactp2, #contactp3, #contactp4, #contactp5{
+    width: 56%;
+  }
+
+  .intro {
+    width: 90%;
+  }
+
+  .intro h3 {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5%;
+  }
+
   .intro h1, .form-area h1 {
     line-height: 40px;
   }
@@ -769,7 +794,7 @@ input[type=number] {
       font-size: 200%;
   }
 
-  h3, .content p, .header li a, #herobutton, .donatebutton, .hero-text p, .footer, .support-text p, #submit input, label, ::placeholder{
+  h3, .content p, .header li a, #herobutton, .donatebutton, .hero-text p, .footer, .support-text p, #submit input, label, ::placeholder, .conconcar li{
       font-size: small;
   }
 

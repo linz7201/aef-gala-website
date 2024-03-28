@@ -804,10 +804,25 @@ label {
         }
     }
 
+    /* css for when contact card overflows */
+    @media (max-width: 1300px) {
+        .conconcar h1 {
+            font-size: 400%;
+        }
+    }
+
 }
 
 @media (max-width:1100px)  { 
     /* tablet viewport */ 
+
+    .conconcar li {
+        font-size: medium;
+    }
+
+    #contactp1, #contactp2, #contactp3, #contactp4, #contactp5 {
+        width: 45%;
+    }
     
     .header a:not(.icon){
         display: none;
@@ -913,6 +928,55 @@ label {
 
 @media (max-width:700px)  { 
     /* phone viewport */
+
+    .header ul li {
+        margin-top: -2px;
+    }
+    
+    .contacthero.hero h1 {
+        line-height: 30px;
+        font-size: 400%;
+        height: auto;
+        margin-top: 10%;
+    }
+
+    .conconcar #contactp1, .conconcar #contactp2, .conconcar #contactp3, .conconcar #contactp4, .conconcar #contactp5 {
+        width: 50%;
+        border-radius: 40px;
+    }
+
+    /* width fixes for even smaller viewport (contact) */
+    @media (max-width: 400px) {
+        .conconcar #contactp1, .conconcar #contactp2, .conconcar #contactp3, .conconcar #contactp4, .conconcar #contactp5 {
+            width: 45%;
+        }
+
+        .contacthero.hero h1 {
+            line-height: 70px;
+            font-size: 400%;
+            height: auto;
+            margin-top: 10%;
+        }
+    }
+
+    .conconcar li {
+        font-size: small;
+        line-height: 15px;
+    }
+
+    .conconcar .row2 .column2 {
+        display: none;
+    }
+
+    .conconcar .row2 .column1 {
+        text-align: center;
+    }
+
+    .conconcar h1 {
+        line-height: 35px;
+        padding: 0;
+        margin-bottom: 7%;
+    }
 
     .oursponsors .oursponsors-text h1 {
         font-size: 300%;
