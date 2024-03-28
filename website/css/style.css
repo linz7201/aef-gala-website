@@ -311,7 +311,7 @@ h1 {
 }
 
 .sponcarp2 {
-    margin-top: -55%;
+    margin-top: -55.1%;
 }
 
 .sponsorItem{
@@ -613,6 +613,7 @@ footer {
     background-size: cover;
     border-radius: 50px;
     padding: 12% 8%;
+    transition: 0.5s;
 }
 
 .sponsorsItem .row1, .sponsorsItem .row2 {

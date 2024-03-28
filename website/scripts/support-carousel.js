@@ -46,7 +46,7 @@ function loadShow(isBig){
             } else {
                 items[i].style.opacity = 0;
                 items[i].style.transform = ``;
-                //items[i].style.display = 'none'; // fixes the oursponsors carousel stack problem
+                //items[i].style.display = 'none'; // alt solution to oursponsors carousel stack problem
             }
         }
     }
@@ -77,7 +77,7 @@ prev.onclick = function(){
 }
 
 function loopChangeItem() {
-    setTimeout(loopChangeItem, 5000);
+    setTimeout(loopChangeItem, 5000); // adjust milliseconds to time until change
     loadCorrectCarousel();
     active = active + 1 < items.length ? active + 1 : active = 0;
 }
