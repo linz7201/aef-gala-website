@@ -1,15 +1,16 @@
 # Alhambra Educational Foundation (AEF) Gala Website
-**FBLA Website Design 2023-2024 - Mark Keppel High School**
+**FBLA Website Design 2023-2024 - Mark Keppel High School** <br/>
+**Click on the link to preview the website: [https://linz7201.github.io/aef-gala-website](url "https://linz7201.github.io/aef-gala-website")**
 
 ## Attributions
-- Floral Watercolor Illustrations  by Junik Studio (https://www.behance.net/JunikStudio)
-- Watercolor Flower Wreaths by Israt Borsha (https://www.behance.net/ijborshae157)
-- Watercolor Flower Vectors by Graphic Google (https://graphicgoogle.com/download/9-free-watercolor-flower-vectors-for-designers/)
-- Watercolor Stains by starline on Freepik (https://www.freepik.com/author/starline)
-- Five People Standing While Talking to Each Other by Antenna on Unsplash (https://unsplash.com/photos/five-person-standing-while-talking-each-other-ZDN-G1xBWHY)
-- People Inside Conference by Jakob Dalbjörn on Unsplash (https://unsplash.com/photos/people-inside-conference-cuKJre3nyYc)
-- Five Children Smiling While Doing Peace Hand Sign by Larm Rmah on Unsplash (https://unsplash.com/photos/five-children-smiling-while-doing-peace-hand-sign-AEaTUnvneik)
-- White and Brown Flowers on White Table by Annie Spratt on Unsplash (https://unsplash.com/photos/white-and-brown-flowers-on-white-table-TQSB-suJu1k)
+- [Floral Watercolor Illustrations  by Junik Studio](url "https://www.behance.net/JunikStudio")
+- [Watercolor Flower Wreaths by Israt Borsha](url "https://www.behance.net/ijborshae157")
+- [Watercolor Flower Vectors by Graphic Google](url "https://graphicgoogle.com/download/9-free-watercolor-flower-vectors-for-designers/")
+- [Watercolor Stains by starline on Freepik](url "https://www.freepik.com/author/starline")
+- [Five People Standing While Talking to Each Other by Antenna on Unsplash](url "https://unsplash.com/photos/five-person-standing-while-talking-each-other-ZDN-G1xBWHY")
+- [People Inside Conference by Jakob Dalbjörn on Unsplash](url "https://unsplash.com/photos/people-inside-conference-cuKJre3nyYc")
+- [Five Children Smiling While Doing Peace Hand Sign by Larm Rmah on Unsplash](url "https://unsplash.com/photos/five-children-smiling-while-doing-peace-hand-sign-AEaTUnvneik")
+- [White and Brown Flowers on White Table by Annie Spratt on Unsplash](url "https://unsplash.com/photos/white-and-brown-flowers-on-white-table-TQSB-suJu1k")
   
 ## Software Used
 - [Visual Studio Code](url "https://code.visualstudio.com/") (IDE application used to develop, compile, and test our code)
@@ -28,4 +29,4 @@ This website is made for the [Alhambra Educational Foundation or AEF](url "https
 
 "The mission of the Alhambra Educational Foundation (AEF) is to raise funds to support and enhance the educational programs of the Alhambra Unified School District (AUSD), benefiting all schools and all students. In addition, the Foundation provides the district, school sites, & all students with direct service by developing, sponsoring and implementing programs which enrich the curriculum & instructional program." (AEF)
 
-The website "aef4kids.com" accessible at https://www.aef4kids.com/ is owned and operated by the Alhambra Unified School District (https://www.ausd.us/).
+The website "aef4kids.com" accessible at [https://www.aef4kids.com/](url "https://www.aef4kids.com/") is owned and operated by the Alhambra Unified School District ([https://www.ausd.us/](url "https://www.ausd.us/")).
