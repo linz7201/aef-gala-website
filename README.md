@@ -2,7 +2,7 @@
 **FBLA Website Design 2023-2024 - Mark Keppel High School**
 
 ## Preview Website
-Copy & Paste this link into a new tab in your browser: https://linz7201.github.io/aef-gala-website/website/gala.html
+Copy & Paste this link into a new tab in your browser: `https://linz7201.github.io/aef-gala-website/website/gala.html`
 
 **OR** follow these steps
 1. In the main page of this repository (`aef-gala-website`), look at the different sections on the right side of the page
