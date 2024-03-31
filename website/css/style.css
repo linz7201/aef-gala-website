@@ -54,8 +54,13 @@ header {
     text-decoration-line: none;
     display: flex;
     align-items: stretch; /* Default */
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-around;
 }
 
 .header, a:visited, a{
