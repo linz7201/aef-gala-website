@@ -1,6 +1,15 @@
 # Alhambra Educational Foundation (AEF) Gala Website
-**FBLA Website Design 2023-2024 - Mark Keppel High School** <br/>
-**Click on the link to preview the website: [https://linz7201.github.io/aef-gala-website](url "https://linz7201.github.io/aef-gala-website")**
+**FBLA Website Design 2023-2024 - Mark Keppel High School**
+
+## Preview Website
+Copy & Paste this link into a new tab in your browser: `https://linz7201.github.io/aef-gala-website/website/gala.html`
+
+**OR** follow these steps
+1. In the main page of this repository (`aef-gala-website`), look at the different sections on the right side of the page
+2. Scroll down and click on the section that says `Deployments`
+3. Once opened, locate the box under the word, `All deployments`
+   - The box should have a green check mark followed by the word, `github-pages`
+4. At the bottom of the same box, click the blue hyperlink which sends you to the website.
 
 ## Attributions
 - [Floral Watercolor Illustrations  by Junik Studio](url "https://www.behance.net/JunikStudio")
