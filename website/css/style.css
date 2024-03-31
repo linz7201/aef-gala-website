@@ -700,11 +700,6 @@ footer {
     gap: 10px;
 }
 
-.message input{
-    height: 170px;
-    border-radius: 19px;
-}
-
 .contactform #submit {
     width: 100%;
 }
