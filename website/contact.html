@@ -82,7 +82,7 @@
                 </section>
                 <section class="input message">
                     <label for="conMessage">Message <span class="asterisk">*</span></label>
-                    <input type="text" id="conMessage" class="required" name="conMessage"  onchange="isEmpty(this, 'conMessageEmpty')">
+                    <textarea id="conMessage" class="required" name="conMessage" onchange="isEmpty(this,'conMessageEmpty')" rows="4" cols="50"></textarea>
                     <small id="conMessageEmpty" class="err
                     orMsg hidden">Input required</small>
                 </section>
