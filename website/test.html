@@ -1,0 +1,41 @@
+<html><body style="background: url(images/watercolor2.png), url(images/watercolor1.png); background-size: 70%, 55%; background-position: left -160% top 5%, right -65% bottom -3%; background-repeat: no-repeat; font-family: 'Times New Roman', Times, serif; margin: 10%; text-align: center;">
+
+<h1 style="text-align: center; color: #c8a45f; font-size: 500%; font-weight: lighter;">Thank You!</h1>
+<p style="font-size: larger;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    line-height: 130%;" >Dear ' + formData.fullName + ',<br>
+Thank you for your generous contribution to the AEF Gala. Your support means a lot to us and helps us continue our mission.</p>
+
+<img src="images/topflowers.png" id="topflowers" style="width: 80%;
+padding-top: 3%;
+align-items: center;">
+<div style="background-image: url(images/wideblock.png);
+    border-radius: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    height: fit-content;
+    padding: 15%; text-align:center;">
+<h3 style="text-align: center; color: #c8a45f; font-size: 300%; font-weight: lighter; margin:2%">Donation Confirmation</h3>
+<p><strong>Item Donated:</strong> formData.itemInput</p>
+<p><strong>Description:</strong> formData.itemDesc</p>
+<p><strong>Value:</strong> $formData.itemValue</p>
+<p><strong>Expiration Date:</strong> formData.itemExpDate</p>
+<p><strong>Amount Donated:</strong> $formData.customAmount </p>
+<p><strong>Card Number (Last 4 digits):</strong> formData.cardNumber.slice(-4)</p>
+
+<p style="margin-top: 20px;">If you believe this submission was made in error, please contact us at <a href="mailto:contact@example.com">contact@example.com</a>.</p>
+
+</div>
+
+<img src="images/bottomflowers.png" id="bottomflowers" style="width: 80%;
+padding-bottom: 5%;
+margin-left: auto;
+margin-right: auto;">
+
+</body></html>
