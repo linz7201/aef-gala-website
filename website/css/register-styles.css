@@ -17,6 +17,11 @@ html {
     font-family: "Times New Roman", Times, serif;
 }
 
+/* Configure website body */
+body {
+    overflow: hidden;
+}
+
 /* Configure header elements and class */
 .header {
     background-color: white;
