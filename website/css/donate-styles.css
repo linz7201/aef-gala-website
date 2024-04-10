@@ -178,6 +178,7 @@ input, .message textarea{
   border-radius: 19px;
   padding: 15px;
   height: 170px;
+  resize:none;
 }
 
 ::placeholder{
