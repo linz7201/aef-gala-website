@@ -17,6 +17,11 @@ html {
   font-family: "Times New Roman", Times, serif;
 }
 
+/* Configure website body */
+body {
+  overflow-x: hidden;
+}
+
 /* Configure header elements and classes */
 .header {
   background-color: white;
@@ -173,6 +178,7 @@ input, .message textarea{
   border-radius: 19px;
   padding: 15px;
   height: 170px;
+  resize:none;
 }
 
 ::placeholder{
