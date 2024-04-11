@@ -12,6 +12,16 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJ0SZ5VN1S"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XJ0SZ5VN1S');
+    </script>
+    
     <title>AEF Gala - Contact Us</title>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -68,7 +78,7 @@
         </section>
 
         <div class="form-area">
-            <form class="contactform" name="input" method="post">
+            <form class="contactform" id="contact-form" name="input" method="post">
                 <section class="input name">
                     <label for="conFullName">Name <span class="asterisk">*</span></label>
                     <input type="text" id="conFullName" class="required" name="conFullName" placeholder="John Doe" onchange="isEmpty(this, 'conFullNameEmpty');">
@@ -78,13 +88,12 @@
                     <label for="conEmail">Email Address <span class="asterisk">*</span></label>
                     <input type="text" id="conEmail" class="required" name="conEmail" placeholder="johndoe@email.com" onchange="isEmpty(this, 'conEmailEmpty'); validate(this, /^[A-Za-z0-9._-]+\@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, 'emailError');">
                     <small id="emailError" class="errorMsg hidden">Input must be a valid email</small>
-                    <small id="conEmailEmpty"class="errorMsg hidden">Input required</small>
+                    <small id="conEmailEmpty" class="errorMsg hidden">Input required</small>
                 </section>
                 <section class="input message">
                     <label for="conMessage">Message <span class="asterisk">*</span></label>
                     <textarea id="conMessage" class="required" name="conMessage" onchange="isEmpty(this,'conMessageEmpty')" rows="4" cols="50"></textarea>
-                    <small id="conMessageEmpty" class="err
-                    orMsg hidden">Input required</small>
+                    <small id="conMessageEmpty" class="errorMsg hidden">Input required</small>
                 </section>
                 <section id="submit">
                     <input id="submit-form" type="submit" value="Submit">
@@ -226,4 +235,26 @@
     enabling the functions for the buttons and animations
  -->
  <script src="./scripts/support-carousel.js"></script>
+ <script src="./scripts/contact-form.js"></script>
+ <script>
+    function validate(element, pattern, errorId){
+        const error = document.getElementById(errorId);
+        // checks if input is empty or if it matches the regex
+        if(element.value=="" || pattern.test(element.value)){
+            element.style.border="1px solid black";
+            error.classList.add("hidden");
+        } else {
+            element.style.border="2px solid red";
+            error.classList.remove("hidden");                
+        }
+    }
+
+    function isEmpty(element, errorId){
+        const error = document.getElementById(errorId);
+        if(element.value != ""){
+            element.style.border = "1px solid black";
+            error.classList.add("hidden");
+        }
+    }
+ </script>
 </html>
