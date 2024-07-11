@@ -1,6 +1,7 @@
 # Alhambra Educational Foundation (AEF) Gala Website
 **FBLA Website Design 2023-2024 - Mark Keppel High School**
 
+***This website includes accurate information regarding the mission of AEF and serves only as a redesign, focusing on donations and AEF's Gala. This website is NOT an official site. Please do not use real information when submitting forms.***
 ## Preview Website
 Copy & Paste this link into a new tab in your browser: `https://linz7201.github.io/aef-gala-website/website/gala.html`
 
@@ -23,14 +24,14 @@ Copy & Paste this link into a new tab in your browser: `https://linz7201.github.
   
 ## Software Used
 - [Visual Studio Code](url "https://code.visualstudio.com/") (IDE application used to develop, compile, and test our code)
-- [Google Apps Script](url "https://www.google.com/script/start/") & [Google Sheets](url "https://www.google.com/sheets/about/") (Apps Script used to pull information from the forms and store it into Sheets)
+- [Google Apps Script](url "https://www.google.com/script/start/") & [Google Sheets](url "https://www.google.com/sheets/about/") (Apps Script used to pull information from the forms and store it into Google Sheets)
 - [GitHub](url "https://github.com/") (online platform used to store code and collaborate with teammates)
 - [Adobe Photoshop 2024](url "https://www.adobe.com/products/photoshop.html") (image creation and editing software)
 - [Figma](url "https://www.figma.com/") (digital prototyping tool used to create the website's format and design)
 - [Procreate](url "https://procreate.com/") (application used to create graphics for the website)
 
 ## Authors
-- [Nick Li](url "https://github.com/linz7201") (*backend*)
+- [Nick Li](url "https://github.com/linz7201") (*frontend/backend*)
 - [Xiushan Lu](url "https://github.com/xiushanlu") (*designs/frontend*)
 
 ## Acknowledgement
